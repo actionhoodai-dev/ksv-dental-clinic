@@ -13,7 +13,7 @@ const services = [
     id: 'root-canal', 
     title: "Root Canal", 
     tamil: "ரூட் கெனால்", 
-    img: "/legacy/img/services/root-canal.png", 
+    img: "/root_canal_procedure_modern_1774466412654.png", 
     desc: "Saving natural teeth with Painless Rotary Endodontics. We combine 30 years of clinical experience with modern digital diagnostics (CBCT-integrated) to ensure perfect procedural outcomes.",
     metrics: [{ label: "Success Rate", value: "98%" }, { label: "Clinical Years", value: "30+" }],
     icon: HeartPulse
@@ -22,7 +22,7 @@ const services = [
     id: 'implants', 
     title: "Dental Implants", 
     tamil: "பல் இம்ப்ளான்ட்", 
-    img: "/legacy/img/services/implants.png", 
+    img: "/dental_implant_closeup_1774466284954.png", 
     desc: "Restore your natural bite and smile with high-grade titanium implants that look and feel just like your original teeth. We use digital guided surgery for maximum precision and comfort.",
     metrics: [{ label: "Titanium Grade", value: "Bio" }, { label: "Patient Comfort", value: "Max" }],
     icon: Microscope
@@ -31,7 +31,7 @@ const services = [
     id: 'braces', 
     title: "Braces & Alignment", 
     tamil: "பல் சீரமைப்பு", 
-    img: "/legacy/img/services/braces.png", 
+    img: "/dental_braces_orthodontics_1774466314667.png", 
     desc: "Corrective orthodontic treatments for both children and adults. We specialize in aesthetic ceramic braces and traditional metal braces to give you a perfectly confident smile.",
     metrics: [{ label: "Duration", value: "6m+" }, { label: "Alignment", value: "Perfect" }],
     icon: Activity
@@ -40,7 +40,7 @@ const services = [
     id: 'surgery', 
     title: "Tooth Impaction", 
     tamil: "தாக்கப்பட்ட பல்", 
-    img: "/legacy/img/services/impaction.png", 
+    img: "/impacted_tooth_surgery_explanation_1774466382768.png", 
     desc: "Specialized removal of impacted wisdom teeth with minimal trauma. We use advanced surgical protocols to ensure zero nerve damage and rapid healing.",
     metrics: [{ label: "Nerve Safety", value: "100%" }, { label: "Recovery", value: "Fast" }],
     icon: ShieldCheck
@@ -49,7 +49,7 @@ const services = [
     id: 'crowns', 
     title: "Crown & Bridge", 
     tamil: "பல் கிரீடம்", 
-    img: "/legacy/img/services/crowns.png", 
+    img: "/dental_crown_bridge_1774466347661.png", 
     desc: "High-grade restorative prosthetics to save damaged teeth and replace missing ones. We use Zirconia and E-max ceramics for highly natural-looking, durable results.",
     metrics: [{ label: "Aesthetic", value: "High" }, { label: "Durability", value: "Peak" }],
     icon: HeartPulse
@@ -58,7 +58,7 @@ const services = [
     id: 'pediatric', 
     title: "Pediatric Care", 
     tamil: "குழந்தைகள் சிகிச்சை", 
-    img: "/legacy/img/services/pediatric.png", 
+    img: "/pediatric_dentistry_child_happy_1774468124717.png", 
     desc: "Gentle, anxiety-free dental care for children of all ages. We focus on preventive dentistry and creating positive dental experiences for our smallest patients.",
     metrics: [{ label: "Friendly Env", value: "High" }, { label: "Child Smile", value: "100%" }],
     icon: Star
@@ -207,7 +207,7 @@ export default function ServiceDetail({ params }: { params: Promise<{ id: string
                     <Link href="/appointment" className="inline-flex bg-accent text-white p-8 px-16 rounded-[40px] font-black text-2xl shadow-2xl shadow-accent/40 hover:-translate-y-2 transition-all active:scale-95 italic-spacing tracking-tight uppercase tracking-widest decoration-white/10 underline decoration-2 underline-offset-4">
                         Consult Dr. Suresh
                     </Link>
-                    <p className="mt-12 text-white/40 text-[9px] uppercase font-black tracking-[0.4em] italic mb-2 leading-relaxed">Pioneering Digital Dental Hubs Since 1995 • India</p>
+                    <p className="mt-12 text-white/40 text-[9px] uppercase font-black tracking-[0.4em] italic mb-2 leading-relaxed">Trusted Dental Care Since 1995 • Specialist Clinical Excellence • Salem</p>
                  </div>
             </section>
             

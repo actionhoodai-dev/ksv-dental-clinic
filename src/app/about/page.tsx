@@ -24,11 +24,11 @@ const About = () => {
             </span>
             <div className="h-[1px] w-20 bg-gradient-to-r from-accent/30 to-transparent"></div>
           </div>
-          <h1 className="font-outfit text-5xl lg:text-7xl font-black text-primary leading-[0.9] tracking-tighter italic lg:-ml-1 decoration-slate-900/5 underline decoration-4 underline-offset-[14px]">
+          <h1 className="font-outfit text-4xl lg:text-5xl font-black text-primary leading-[0.9] tracking-tighter italic lg:-ml-1 decoration-slate-900/5 underline decoration-4 underline-offset-[14px]">
             Decades of <br/><span className="text-accent underline decoration-primary/5 decoration-4">Surgical Mastery</span>
           </h1>
           <div className="space-y-6">
-            <p className="font-outfit text-3xl text-primary font-black tracking-tighter opacity-80 decoration-slate-900/5 decoration-4 underline-offset-8 italic">
+            <p className="font-outfit text-xl lg:text-2xl text-primary font-black tracking-tighter opacity-80 decoration-slate-900/5 decoration-4 underline-offset-8 italic">
                கே.எஸ்.வி பல் மருத்துவமனை
             </p>
             <p className="text-lg text-slate-500 max-w-lg leading-relaxed font-bold uppercase tracking-tighter decoration-accent/10 underline decoration-2 underline-offset-4 decoration-2 italic italic-spacing selection:bg-accent/20">
@@ -45,14 +45,14 @@ const About = () => {
           </div>
           
           <div className="grid grid-cols-2 gap-8">
-             <div className="bg-slate-50 p-8 rounded-[40px] border border-slate-100/50 shadow-2xl transition-all hover:scale-105 group hover:border-accent">
-               <div className="text-4xl font-black text-primary mb-1 tracking-tighter italic group-hover:text-accent font-outfit">30+</div>
-               <div className="text-[8px] font-black text-slate-400 uppercase tracking-[0.4em] font-outfit">Clinical Years</div>
-             </div>
-             <div className="bg-slate-50 p-8 rounded-[40px] border border-slate-100/50 shadow-2xl transition-all hover:scale-105 group hover:border-accent">
-               <div className="text-4xl font-black text-accent mb-1 tracking-tighter italic group-hover:text-primary font-outfit">1,000+</div>
-               <div className="text-[8px] font-black text-slate-400 uppercase tracking-[0.4em] font-outfit">Successful Procedures</div>
-             </div>
+              <div className="bg-slate-50 p-8 rounded-[40px] border border-slate-100/50 shadow-2xl transition-all hover:scale-105 group hover:border-accent">
+                <div className="text-3xl font-black text-primary mb-1 tracking-tighter italic group-hover:text-accent font-outfit">30+</div>
+                <div className="text-[8px] font-black text-slate-400 uppercase tracking-[0.4em] font-outfit">Clinical Years</div>
+              </div>
+              <div className="bg-slate-50 p-8 rounded-[40px] border border-slate-100/50 shadow-2xl transition-all hover:scale-105 group hover:border-accent">
+                <div className="text-3xl font-black text-accent mb-1 tracking-tighter italic group-hover:text-primary font-outfit">1,000+</div>
+                <div className="text-[8px] font-black text-slate-400 uppercase tracking-[0.4em] font-outfit">Successful Procedures</div>
+              </div>
           </div>
         </motion.div>
         
@@ -65,7 +65,7 @@ const About = () => {
           <div className="absolute inset-0 bg-indigo-100/30 blur-[150px] rounded-full animate-pulse z-0"></div>
           <div className="relative z-10 p-4 bg-white/40 backdrop-blur-3xl rounded-[64px] border border-white shadow-2xl ring-1 ring-slate-900/5 transition-transform hover:scale-[1.01] duration-1000">
              <Image 
-                src="/legacy/ksv-dental-clinic-logo.jpeg" 
+                src="/doctor_portrait_1772036839350.png" 
                 width={600}
                 height={600}
                 className="w-full rounded-[48px] shadow-2xl transition-transform duration-700" 

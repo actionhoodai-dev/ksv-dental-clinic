@@ -32,13 +32,13 @@ const Contact = () => {
                              Visit us for world-class dental care in a comfortable environment. Professional treatments with Dr. Suresh's 30 years of expertise and international-standard sterilization.
                         </p>
                         <p className="text-[10px] text-slate-400 font-black uppercase tracking-[0.3em] italic mb-4 max-w-md leading-relaxed">
-                            Located centrally for your convenience, KSV Dental Hospital is the region's benchmark for specialized restorative care. We ensure every patient receives personalized diagnostic mapping before any procedure begins.
+                            Located centrally for your convenience, KSV Dental Clinic is the region's benchmark for specialized restorative care. We ensure every patient receives personalized diagnostic mapping before any procedure begins.
                         </p>
                         
                         <div className="space-y-8">
                             {[
                                 { icon: UserCheck, title: "Clinical Specialist", value: "Dr. L. Suresh, MDS", sub: "30+ Years Surgical Experience", color: "primary" },
-                                { icon: MapPin, title: "Clinical Location", value: "KSV Dental Hospital", sub: "India", color: "accent" },
+                                { icon: MapPin, title: "Clinical Location", value: "KSV Dental Clinic", sub: "Salem", color: "accent" },
                                 { icon: Phone, title: "Consulting Helpline", value: "+91 94880 21937", sub: "Mon-Sat: 6PM - 8:30PM", color: "primary" },
                             ].map((item, i) => (
                                 <motion.div 

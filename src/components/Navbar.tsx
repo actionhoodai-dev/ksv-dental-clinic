@@ -40,17 +40,15 @@ const Navbar = () => {
       <div className="container mx-auto px-8 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-4 group relative">
           <div className="relative overflow-hidden rounded-[16px] shadow-xl transition-transform group-hover:rotate-6 active:scale-95 duration-500">
-            <Image 
-              src="/legacy/ksv-dental-clinic-logo.jpeg" 
-              width={44} 
-              height={44} 
-              className="object-cover" 
+            <img 
+              src="/logo.jpeg" 
+              className="w-[44px] h-[44px] object-cover" 
               alt="KSV Logo" 
             />
           </div>
           <div className="flex flex-col">
             <span className="font-outfit font-black text-2xl text-primary leading-none italic-spacing transform transition-all group-hover:scale-110">KSV</span>
-            <span className="text-[9px] font-black text-accent tracking-[0.4em] mt-1 uppercase transition-colors group-hover:text-primary">Dental Hospital</span>
+            <span className="text-[9px] font-black text-accent tracking-[0.4em] mt-1 uppercase transition-colors group-hover:text-primary">Dental Clinic</span>
           </div>
         </Link>
         

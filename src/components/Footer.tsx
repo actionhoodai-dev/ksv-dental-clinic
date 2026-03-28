@@ -22,11 +22,11 @@ const Footer = () => {
           <div className="space-y-6">
             <Link href="/" className="flex items-center gap-3 group">
               <div className="bg-white p-1 rounded-xl shadow-2xl transition-transform group-hover:rotate-12 duration-500 overflow-hidden">
-                <Image src="/legacy/ksv-dental-clinic-logo.jpeg" width={36} height={36} className="object-cover rounded-lg" alt="KSV Logo" />
+                <img src="/logo.jpeg" className="w-[36px] h-[36px] object-cover rounded-lg" alt="KSV Logo" />
               </div>
               <div className="flex flex-col">
                 <span className="font-outfit font-black text-2xl tracking-tighter italic-spacing uppercase leading-none">KSV</span>
-                <span className="text-[8px] font-black text-accent tracking-[0.4em] uppercase mt-0.5 transition-colors group-hover:text-white leading-none">Dental Hospital</span>
+                <span className="text-[8px] font-black text-accent tracking-[0.4em] uppercase mt-0.5 transition-colors group-hover:text-white leading-none">Dental Clinic</span>
               </div>
             </Link>
             <p className="text-slate-400 font-bold leading-relaxed max-w-xs italic uppercase tracking-tighter text-[11px] decoration-accent/10 underline decoration-2 underline-offset-4 transition-colors hover:text-white">Providing high-grade dental care for over 30 years with a legacy of gentle precision and medical excellence.</p>
@@ -54,26 +54,26 @@ const Footer = () => {
 
           <div>
             <h4 className="font-outfit font-black text-[9px] mb-8 uppercase tracking-[0.4em] text-accent">Reach Us</h4>
-            <div className="space-y-6">
-               <div className="flex gap-4 items-center group">
-                  <div className="p-3 bg-white/5 rounded-xl border border-white/5 transition-transform group-hover:scale-110">
-                    <Phone size={16} className="text-accent" />
-                  </div>
-                  <div className="flex flex-col">
-                    <span className="text-white font-black text-lg italic tracking-wide leading-none">+91 94880 21937</span>
-                    <span className="text-[8px] font-black text-slate-500 uppercase tracking-[0.3em] mt-1 leading-none">Mon-Sat: 6PM - 8:30PM</span>
-                  </div>
-               </div>
-               <div className="flex gap-4 items-center group">
-                  <div className="p-3 bg-white/5 rounded-xl border border-white/5 transition-transform group-hover:scale-110">
-                    <MapPin size={16} className="text-accent" />
-                  </div>
-                  <div className="flex flex-col">
-                    <span className="text-white font-black text-md italic tracking-tight italic leading-none">KSV Dental Clinic</span>
-                    <span className="text-[8px] font-black text-slate-500 uppercase tracking-[0.2em] mt-1 italic leading-none">India</span>
-                  </div>
-               </div>
-            </div>
+             <div className="space-y-6">
+                <a href="tel:+919488021937" className="flex gap-4 items-center group cursor-pointer hover:translate-x-1 transition-transform">
+                   <div className="p-3 bg-white/5 rounded-xl border border-white/5 transition-transform group-hover:scale-110 group-hover:bg-accent group-hover:border-accent">
+                     <Phone size={16} className="text-accent group-hover:text-white" />
+                   </div>
+                   <div className="flex flex-col">
+                     <span className="text-white font-black text-lg italic tracking-wide leading-none group-hover:text-accent transition-colors">+91 94880 21937</span>
+                     <span className="text-[8px] font-black text-slate-500 uppercase tracking-[0.3em] mt-1 leading-none">Mon-Sat: 6PM - 8:30PM</span>
+                   </div>
+                </a>
+                <a href="https://www.google.com/maps/search/?api=1&query=KSV+Dental+Clinic+Salem" target="_blank" rel="noopener noreferrer" className="flex gap-4 items-center group cursor-pointer hover:translate-x-1 transition-transform">
+                   <div className="p-3 bg-white/5 rounded-xl border border-white/5 transition-transform group-hover:scale-110 group-hover:bg-accent group-hover:border-accent">
+                     <MapPin size={16} className="text-accent group-hover:text-white" />
+                   </div>
+                   <div className="flex flex-col">
+                     <span className="text-white font-black text-md italic tracking-tight italic leading-none group-hover:text-accent transition-colors">KSV Dental Clinic</span>
+                     <span className="text-[8px] font-black text-slate-500 uppercase tracking-[0.2em] mt-1 italic leading-none">SALEM</span>
+                   </div>
+                </a>
+             </div>
           </div>
 
           <div className="flex flex-col gap-6">

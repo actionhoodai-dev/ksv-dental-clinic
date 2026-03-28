@@ -15,7 +15,7 @@ const ServicesListing = () => {
           category: "Common", 
           title: "Root Canal", 
           tamil: "ரூட் கெனால்", 
-          img: "/legacy/img/services/root-canal.png", 
+          img: "/root_canal_procedure_modern_1774466412654.png", 
           desc: "Expert, painless treatment to save your natural tooth with 30 years of endodontic precision.", 
           icon: HeartPulse 
         },
@@ -24,7 +24,7 @@ const ServicesListing = () => {
           category: "Surgical", 
           title: "Dental Implants", 
           tamil: "பல் இம்ப்ளான்ட்", 
-          img: "/legacy/img/services/implants.png", 
+          img: "/dental_implant_closeup_1774466284954.png", 
           desc: "Digital precise extraction for maximum safety and high-grade titanium implants.", 
           icon: Microscope 
         },
@@ -33,7 +33,7 @@ const ServicesListing = () => {
           category: "Orthodontics", 
           title: "Braces & Alignment", 
           tamil: "பல் சீரமைப்பு", 
-          img: "/legacy/img/services/braces.png", 
+          img: "/dental_braces_orthodontics_1774466314667.png", 
           desc: "Corrective treatments for a perfect, healthy smile using aesthetic ceramic and traditional braces.", 
           icon: Activity 
         },
@@ -42,7 +42,7 @@ const ServicesListing = () => {
           category: "Surgical", 
           title: "Tooth Impaction", 
           tamil: "தாக்கப்பட்ட பல்", 
-          img: "/legacy/img/services/impaction.png", 
+          img: "/impacted_tooth_surgery_explanation_1774466382768.png", 
           desc: "Gentle surgical removal of impacted wisdom teeth with zero nerve damage guarantee.", 
           icon: ShieldCheck 
         },
@@ -51,7 +51,7 @@ const ServicesListing = () => {
           category: "Restorative", 
           title: "Crown & Bridge", 
           tamil: "பல் கிரீடம்", 
-          img: "/legacy/img/services/crowns.png", 
+          img: "/dental_crown_bridge_1774466347661.png", 
           desc: "High-grade prosthetics for tooth restoration using Zirconia and E-max ceramic.", 
           icon: HeartPulse 
         },
@@ -60,7 +60,7 @@ const ServicesListing = () => {
           category: "Common", 
           title: "Pediatric Care", 
           tamil: "குழந்தைகள் சிகிச்சை", 
-          img: "/legacy/img/services/pediatric.png", 
+          img: "/pediatric_dentistry_child_happy_1774468124717.png", 
           desc: "Gentle and friendly care for your little ones in an anxiety-free environment.", 
           icon: Star 
         },
@@ -76,13 +76,10 @@ const ServicesListing = () => {
                         whileInView={{ opacity: 1, scale: 1 }}
                         className="flex flex-col gap-6"
                     >
-                      <h1 className="font-outfit text-5xl md:text-7xl font-black text-primary leading-[0.9] tracking-tighter italic">
-                          Specialized <br/><span className="text-accent underline decoration-primary/5 decoration-4 underline-offset-[12px]">Treatments</span>
+                      <h1 className="font-outfit text-4xl lg:text-5xl font-black text-primary leading-[0.9] tracking-tighter italic lg:-ml-1 decoration-slate-900/5 underline decoration-4 underline-offset-[14px]">
+                          Clinical <br/><span className="text-accent underline decoration-primary/5 decoration-4">Specialties</span>
                       </h1>
-                      <p className="text-xl text-slate-400 font-black italic tracking-widest decoration-accent/10 underline decoration-2 underline-offset-4 decoration-2 uppercase mb-2 transition-colors hover:text-slate-600">
-                          Painless Surgical Procedures • Digital Endodontics
-                      </p>
-                      <p className="font-outfit text-3xl text-primary font-black italic tracking-tighter origin-center decoration-slate-900/5 decoration-4 underline-offset-4 scale-x-110">பல் சிகிச்சை முறைகள்</p>
+                      <p className="font-outfit text-xl lg:text-2xl text-primary font-black tracking-tighter opacity-80 decoration-slate-900/5 decoration-4 underline-offset-4 italic">சிறப்பு பல் மருத்துவ சேவைகள்</p>
                       <p className="text-[10px] text-slate-400 font-black uppercase tracking-[0.3em] italic max-w-xl mx-auto leading-relaxed">
                         Under the expert MDS leadership of Dr. L. Suresh, KSV Dental Clinic provides a full spectrum of high-grade restorative and surgical treatments. We specialize in digital-first procedures that minimize recovery time while maximizing clinical outcomes.
                       </p>
@@ -114,12 +111,12 @@ const ServicesListing = () => {
                             </Link>
                             <div className="px-8 py-10 flex flex-col gap-3">
                                 <div className="flex flex-col">
-                                   <h3 className="font-outfit text-2xl lg:text-3xl font-black text-primary transition-colors group-hover:text-accent tracking-tighter selection:bg-accent/20">
+                                   <h3 className="font-outfit text-xl lg:text-2xl font-black text-primary transition-colors group-hover:text-accent tracking-tighter selection:bg-accent/20">
                                        {service.title}
                                    </h3>
-                                   <p className="font-outfit text-xl text-accent font-black italic-spacing tracking-tight decoration-primary/5 decoration-2">
-                                       {service.tamil}
-                                   </p>
+                                   <div className="text-accent font-outfit text-lg font-black italic-spacing mb-1 underline decoration-accent/20 underline-offset-4 decoration-2">
+                                    {service.tamil}
+                                </div>
                                 </div>
                                 <p className="text-slate-400 text-[10px] leading-relaxed group-hover:text-slate-600 transition-colors uppercase font-black tracking-[0.2em] decoration-accent/10 underline decoration-2 underline-offset-4 decoration-2 italic mb-4">
                                     {service.desc}
