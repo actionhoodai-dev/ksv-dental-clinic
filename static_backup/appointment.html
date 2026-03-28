@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Appointment | KSV Dental Clinic | Dr. L. Suresh</title>
+    
+    <!-- Meta -->
+    <meta name="description" content="Schedule your dental appointment at KSV Dental Hospital. Easy online booking for Root Canal, Implants, and specialized treatments.">
+    <link rel="icon" type="image/jpeg" href="/legacy/ksv-dental-clinic-logo.jpeg">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=Noto+Sans+Tamil:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Scripts -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/framer-motion@10.16.4/dist/framer-motion.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="/js/components.js" type="text/babel"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2F2A6B',
+                        accent: '#F07D1A',
+                    },
+                    fontFamily: {
+                        outfit: ['Outfit', 'sans-serif'],
+                        inter: ['Inter', 'sans-serif'],
+                        tamil: ['Noto Sans Tamil', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-[#F8FAFC] font-inter text-[#1F2937]">
+    <div id="root"></div>
+
+    <script type="text/babel">
+        const { SharedUI } = window;
+        const { Navbar, Footer } = SharedUI;
+        const Motion = window.Motion || window.FramerMotion;
+        const { motion } = Motion || { motion: (p) => p };
+
+        const AppointmentForm = () => (
+            <main className="pt-24 min-h-screen">
+                <section className="py-24 bg-white relative overflow-hidden">
+                    <div className="container mx-auto px-6 max-w-4xl relative z-10 italic">
+                        <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} className="text-center mb-16">
+                            <h1 className="font-outfit text-6xl lg:text-8xl font-black text-primary leading-tight mb-8 underline decoration-slate-900/10 decoration-8 underline-offset-8">Consultation <br/><span className="text-accent underline decoration-primary/5 decoration-4">Registry</span></h1>
+                            <p className="text-gray-400 font-bold uppercase tracking-tighter decoration-accent/10 underline decoration-2 underline-offset-4 decoration-2 max-w-2xl mx-auto italic mb-6">Schedule your clinical visit with Dr. Suresh (30+ Years Experience). Appointments available Mon-Sat, 6:00 PM – 8:30 PM.</p>
+                            <p className="font-tamil text-3xl text-primary font-bold mt-4 tracking-tighter underline decoration-slate-900/5 decoration-8 underline-offset-10 italic">முன்பதிவு செய்ய இங்கே கிளிக் செய்யவும்</p>
+                        </motion.div>
+                        
+                        <motion.form initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} className="bg-[#F8FAFC] p-16 rounded-[64px] border border-blue-50 shadow-2xl shadow-blue-900/[0.03] italic">
+                            <div className="grid md:grid-cols-2 gap-10 mb-10">
+                                <div className="flex flex-col gap-4">
+                                    <label className="text-[10px] font-black text-gray-400 uppercase tracking-[0.3em] pl-6 italic">Full Patient Name</label>
+                                    <input type="text" className="bg-white p-6 rounded-[28px] border border-gray-100 focus:border-accent outline-none shadow-xl shadow-blue-900/[0.02] font-black text-primary tracking-tight italic" placeholder="Name" />
+                                </div>
+                                <div className="flex flex-col gap-4">
+                                    <label className="text-[10px] font-black text-gray-400 uppercase tracking-[0.3em] pl-6 italic">Active Contact Number</label>
+                                    <input type="tel" className="bg-white p-6 rounded-[28px] border border-gray-100 focus:border-accent outline-none shadow-xl shadow-blue-900/[0.02] font-black text-primary text-2xl italic tracking-widest decoration-accent/10 underline decoration-2 underline-offset-4 decoration-2" placeholder="+91" />
+                                </div>
+                            </div>
+                            <div className="flex flex-col gap-4 mb-10">
+                                <label className="text-[10px] font-black text-gray-400 uppercase tracking-[0.3em] pl-6 italic">Clinical Specialization</label>
+                                <select className="bg-white p-6 rounded-[28px] border border-gray-100 focus:border-accent outline-none shadow-xl shadow-blue-900/[0.02] font-black text-primary italic uppercase tracking-widest appearance-none">
+                                    <option>Root Canal Treatment</option>
+                                    <option>Dental Implants</option>
+                                    <option>Braces & Alignment</option>
+                                    <option>Surgical Extraction</option>
+                                    <option>Pediatric Care</option>
+                                    <option>General Oral Checkup</option>
+                                </select>
+                            </div>
+                            <div className="flex flex-col gap-4 mb-12">
+                                <label className="text-[10px] font-black text-gray-400 uppercase tracking-[0.3em] pl-6 italic">Patient History / Description</label>
+                                <textarea className="bg-white p-6 rounded-[28px] border border-gray-100 focus:border-accent outline-none shadow-xl shadow-blue-900/[0.02] min-h-[180px] font-black text-primary italic" placeholder="Description"></textarea>
+                            </div>
+                            <button className="w-full bg-primary text-white p-8 rounded-[40px] font-black text-2xl shadow-2xl shadow-primary/30 hover:-translate-y-1 transition-all italic tracking-tight uppercase tracking-widest tracking-tight scale-100 hover:scale-[1.02]">Confirm Registry</button>
+                        </motion.form>
+                    </div>
+                </section>
+            </main>
+        );
+
+        const App = () => (
+            <div>
+                <Navbar activePage="contact" />
+                <AppointmentForm />
+                <Footer />
+            </div>
+        );
+
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+        root.render(<App />);
+    </script>
+</body>
+</html>

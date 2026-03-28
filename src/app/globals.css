@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 15, 23, 42;
+  --background-start-rgb: 248, 250, 252;
+  --background-end-rgb: 255, 255, 255;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+@layer components {
+  .section-padding {
+    @apply py-24 lg:py-32;
+  }
+  
+  .container-padding {
+    @apply px-6 lg:px-12 max-w-7xl mx-auto;
+  }
+
+  .glass-card {
+    @apply bg-white/70 backdrop-blur-xl border border-white/40 shadow-2xl;
+  }
+  
+  .medical-shadow {
+    @apply shadow-[0_20px_60px_-15px_rgba(47,42,107,0.1)];
+  }
+
+  .premium-button {
+    @apply bg-primary text-white p-6 px-12 rounded-[40px] font-black text-xl shadow-2xl shadow-primary/30 hover:-translate-y-1 transition-transform italic tracking-tight uppercase tracking-widest active:scale-95;
+  }
+}
+
+/* Custom Utilities for Spacious Layout */
+.text-balance {
+  text-wrap: balance;
+}
+
+.italic-spacing {
+  letter-spacing: -0.02em;
+}

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About KSV Dental | 30 Years Clinical Excellence</title>
+    
+    <!-- Meta -->
+    <meta name="description" content="Learn about KSV Dental Clinic's 30-year legacy of excellence under Dr. L. Suresh. Modern technology meets compassionate care.">
+    <link rel="icon" type="image/jpeg" href="/legacy/ksv-dental-clinic-logo.jpeg">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=Noto+Sans+Tamil:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Scripts -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/framer-motion@10.16.4/dist/framer-motion.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="/js/components.js" type="text/babel"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2F2A6B',
+                        accent: '#F07D1A',
+                    },
+                    fontFamily: {
+                        outfit: ['Outfit', 'sans-serif'],
+                        inter: ['Inter', 'sans-serif'],
+                        tamil: ['Noto Sans Tamil', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-[#F8FAFC] font-inter text-[#1F2937]">
+    <div id="root"></div>
+
+    <script type="text/babel">
+        const { SharedUI } = window;
+        const { Navbar, Footer } = SharedUI;
+        const Motion = window.Motion || window.FramerMotion;
+        const { motion } = Motion || { motion: (p) => p };
+
+        const Content = () => (
+            <main className="pt-32 min-h-screen">
+                <section className="py-24 bg-white overflow-hidden relative italic">
+                    <div className="container mx-auto px-10">
+                        <div className="grid lg:grid-cols-2 gap-20 items-center">
+                            <motion.div initial={{ opacity: 0, x: -50 }} whileInView={{ opacity: 1, x: 0 }}>
+                                <span className="text-accent font-black tracking-widest uppercase text-xs mb-4 block underline decoration-accent/10 underline-offset-4 decoration-2 italic">Clinical Excellence</span>
+                                <h1 className="font-outfit text-6xl lg:text-8xl font-black text-primary leading-tight mb-8 underline decoration-slate-900/10 decoration-8 underline-offset-8">30 Years of <br/><span className="text-accent underline decoration-primary/5 decoration-4">Gentle Care</span></h1>
+                                <p className="font-tamil text-3xl text-primary font-bold mb-8 italic tracking-tight underline decoration-slate-900/5 decoration-8 underline-offset-10">கே.எஸ்.வி பல் மருத்துவமனை</p>
+                                <p className="text-gray-400 text-xl leading-relaxed mb-12 font-bold uppercase tracking-tighter decoration-accent/10 underline decoration-2 underline-offset-4 decoration-2 italic">
+                                    Founded with a vision to provide specialized dental care, KSV Dental Clinic has become a benchmark for medical excellence. Under the leadership of Dr. L. Suresh, we integrate 3 decades of expertise with modern digital precision.
+                                </p>
+                                <div className="grid grid-cols-2 gap-10">
+                                    <div className="bg-white p-8 rounded-[40px] border border-gray-100 shadow-2xl shadow-blue-900/[0.03] scale-100 hover:scale-105 transition-transform">
+                                        <div className="text-5xl font-black text-primary mb-2 tracking-tighter italic">30+</div>
+                                        <div className="text-[10px] font-black text-gray-400 uppercase tracking-[0.3em]">Years Legacy</div>
+                                    </div>
+                                    <div className="bg-white p-8 rounded-[40px] border border-gray-100 shadow-2xl shadow-blue-900/[0.03] scale-100 hover:scale-105 transition-transform">
+                                        <div className="text-5xl font-black text-accent mb-2 tracking-tighter italic">15k+</div>
+                                        <div className="text-[10px] font-black text-gray-400 uppercase tracking-[0.3em]">Smiles Saved</div>
+                                    </div>
+                                </div>
+                            </motion.div>
+                            <motion.div initial={{ opacity: 0, scale: 0.9 }} whileInView={{ opacity: 1, scale: 1 }} className="relative group">
+                                <div className="absolute inset-x-0 bottom-0 top-1/2 bg-blue-100/30 blur-[150px] rounded-full animate-pulse"></div>
+                                <img src="/legacy/ksv-dental-clinic-logo.jpeg" className="w-full rounded-[64px] shadow-2xl border-[20px] border-white transform transition-transform group-hover:rotate-2" alt="Medical Excellence" />
+                            </motion.div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        );
+
+        const App = () => (
+            <div>
+                <Navbar activePage="about" />
+                <Content />
+                <Footer />
+            </div>
+        );
+
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+        root.render(<App />);
+    </script>
+</body>
+</html>

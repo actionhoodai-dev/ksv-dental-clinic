@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | KSV Dental Clinic | Dr. L. Suresh</title>
+    
+    <!-- Meta -->
+    <meta name="description" content="View clinical and procedural dental cases at KSV Dental Hospital. 30 years of successful treatments in Root Canal, Implaints, and Braces.">
+    <link rel="icon" type="image/jpeg" href="/legacy/ksv-dental-clinic-logo.jpeg">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=Noto+Sans+Tamil:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Scripts -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/framer-motion@10.16.4/dist/framer-motion.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="/js/components.js" type="text/babel"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2F2A6B',
+                        accent: '#F07D1A',
+                    },
+                    fontFamily: {
+                        outfit: ['Outfit', 'sans-serif'],
+                        inter: ['Inter', 'sans-serif'],
+                        tamil: ['Noto Sans Tamil', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-[#F8FAFC] font-inter text-[#1F2937]">
+    <div id="root"></div>
+
+    <script type="text/babel">
+        const { SharedUI } = window;
+        const { Navbar, Footer } = SharedUI;
+        const Motion = window.Motion || window.FramerMotion;
+        const { motion } = Motion || { motion: (p) => p };
+
+        const GalleryGrid = () => {
+            const images = [
+                { id: 1, title: "Root Canal Procedure", tamil: "ரூட் கெனால்", img: "/legacy/img/services/root-canal.png" },
+                { id: 2, title: "Wisdom Tooth Surgery", tamil: "பல் பிடுங்குதல்", img: "/legacy/img/services/impaction.png" },
+                { id: 3, title: "Orthodontic Realignment", tamil: "பல் சீரமைப்பு", img: "/legacy/img/services/braces.png" },
+                { id: 4, title: "Dental Implants", tamil: "பல் இம்ப்ளான்ட்", img: "/legacy/img/services/implants.png" },
+                { id: 5, title: "Full Mouth Rehab", tamil: "பல் கிரீடம்", img: "/legacy/img/services/crowns.png" },
+                { id: 6, title: "Pediatric Care", tamil: "குழந்தைகள் சிகிச்சை", img: "/legacy/img/services/pediatric.png" },
+            ];
+
+            return (
+                <main className="pt-24 min-h-screen">
+                    <section className="py-32 bg-white relative overflow-hidden">
+                        <div className="container mx-auto px-6">
+                            <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} className="text-center mb-24 italic">
+                                <h1 className="font-outfit text-6xl lg:text-8xl font-black text-primary leading-tight mb-8 underline decoration-slate-900/10 decoration-8 underline-offset-8">Clinical <br/><span className="text-accent underline decoration-primary/5 decoration-4">Gallery</span></h1>
+                                <p className="text-gray-400 font-bold uppercase tracking-tighter decoration-accent/10 underline decoration-2 underline-offset-4 decoration-2 max-w-xl mx-auto italic mb-10 leading-relaxed">Highlighting 30 years of clinical excellence and successful procedural outcomes at KSV Dental Hospital.</p>
+                                <p className="font-tamil text-3xl text-primary font-bold mt-4 tracking-tight decoration-slate-900/5 decoration-8 underline-offset-10 italic">மருத்துவ சிகிச்சை புகைப்படங்கள்</p>
+                            </motion.div>
+                            
+                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+                                {images.map((item) => (
+                                    <motion.div
+                                        key={item.id}
+                                        initial={{ opacity: 0, scale: 0.9 }}
+                                        whileInView={{ opacity: 1, scale: 1 }}
+                                        whileHover={{ y: -15 }}
+                                        className="group rounded-[56px] overflow-hidden border-[16px] border-white shadow-2xl relative transition-all duration-500 hover:shadow-blue-900/[0.1]"
+                                    >
+                                        <img src={item.img} className="w-full aspect-square object-cover transition-transform duration-1000 group-hover:scale-110 brightness-[0.9] group-hover:brightness-100" alt={item.title} />
+                                        <div className="absolute inset-x-0 bottom-0 p-10 bg-gradient-to-t from-primary/95 via-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col items-center text-center backdrop-blur-sm">
+                                            <h4 className="text-white font-outfit text-3xl font-black tracking-tight mb-2 underline decoration-accent/20 underline-offset-4 decoration-2 italic uppercase">{item.title}</h4>
+                                            <p className="text-accent font-black text-xs tracking-[0.3em] uppercase">{item.tamil}</p>
+                                        </div>
+                                    </motion.div>
+                                ))}
+                            </div>
+                            
+                            <div className="mt-24 text-center">
+                                <a href="/appointment.html" className="inline-block bg-primary text-white p-8 px-16 rounded-[40px] font-black text-2xl shadow-2xl shadow-primary/30 hover:-translate-y-1 transition-all italic tracking-tight uppercase tracking-widest tracking-tight scale-100 hover:scale-[1.05]">Request Procedure Gallery</a>
+                            </div>
+                        </div>
+                    </section>
+                </main>
+            );
+        };
+
+        const App = () => (
+            <div>
+                <Navbar activePage="gallery" />
+                <GalleryGrid />
+                <Footer />
+            </div>
+        );
+
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+        root.render(<App />);
+    </script>
+</body>
+</html>
