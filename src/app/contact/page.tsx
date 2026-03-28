@@ -76,14 +76,16 @@ const Contact = () => {
                                         sub: "Yercaud Main Road", 
                                         address: "Shop No.- TK-3, Venkatathri Nilayam, Yercaud Main Road, Near Modern Theatre, Salem-636008",
                                         phone: "+91 94880 21937",
-                                        map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31252.17409240897!2d78.173!3d11.69!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3babf16a65bc7919%3A0x49580e7d0408b44a!2sYercaud+Main+Road!5e0"
+                                        map: "https://www.google.com/maps/search/?api=1&query=Venkatathri+Nilayam+Yercaud+Main+Road+Salem",
+                                        mapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31252.17409240897!2d78.173!3d11.69!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3babf16a65bc7919%3A0x49580e7d0408b44a!2sYercaud+Main+Road!5e0"
                                     },
                                     { 
                                         name: "Omalur Branch", 
                                         sub: "Near Taluk Office", 
                                         address: "87/6, Swaminathan Complex, near Taluk Office, Omalur",
                                         phone: "+91 94880 21937",
-                                        map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31252.17409240897!2d78.04!3d11.7!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3babf16a65bc7919%3A0x49580e7d0408b44a!2sOmalur+Taluk+Office!5e0"
+                                        map: "https://www.google.com/maps/search/?api=1&query=Swaminathan+Complex+Omalur+Taluk+Office"
+                                        // mapEmbed removed as per user request
                                     }
                                 ].map((branch, idx) => (
                                     <div key={idx} className="bg-white p-8 rounded-[32px] border border-slate-100 shadow-xl group/branch">
@@ -96,16 +98,23 @@ const Contact = () => {
                                                 <MapPin size={18} />
                                             </div>
                                         </div>
-                                        <div className="w-full h-40 bg-slate-100 rounded-2xl overflow-hidden mb-6 ring-1 ring-slate-900/5">
-                                            <iframe 
-                                                src={branch.map} 
-                                                width="100%" 
-                                                height="100%" 
-                                                style={{ border: 0 }} 
-                                                allowFullScreen 
-                                                loading="lazy" 
-                                            ></iframe>
-                                        </div>
+                                        {branch.mapEmbed && (
+                                            <div className="w-full h-40 bg-slate-100 rounded-2xl overflow-hidden mb-6 ring-1 ring-slate-900/5">
+                                                <iframe 
+                                                    src={branch.mapEmbed} 
+                                                    width="100%" 
+                                                    height="100%" 
+                                                    style={{ border: 0 }} 
+                                                    allowFullScreen 
+                                                    loading="lazy" 
+                                                ></iframe>
+                                            </div>
+                                        )}
+                                        {!branch.mapEmbed && (
+                                            <div className="w-full h-20 flex items-center justify-center bg-slate-50/50 rounded-2xl mb-6 border border-slate-100/50">
+                                                <MapPin className="text-slate-200" size={32} />
+                                            </div>
+                                        )}
                                         <div className="flex flex-col gap-4">
                                             <p className="text-[10px] text-slate-400 font-black uppercase tracking-widest leading-relaxed italic">{branch.address}</p>
                                             <div className="flex items-center justify-between pt-4 border-t border-slate-50">
