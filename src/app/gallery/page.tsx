@@ -28,27 +28,27 @@ const Gallery = () => {
                         whileInView={{ opacity: 1, scale: 1 }}
                         className="flex flex-col gap-6"
                     >
-                      <h1 className="font-outfit text-5xl md:text-7xl font-black text-primary leading-[0.9] tracking-tighter italic">
-                          Clinical <br/><span className="text-accent underline decoration-primary/5 decoration-4 underline-offset-[12px]">Gallery</span>
+                      <h1 className="font-outfit text-4xl md:text-7xl font-black text-primary leading-[0.9] tracking-tighter italic">
+                          Clinical <br/><span className="text-accent underline decoration-primary/5 decoration-4 md:underline-offset-[12px] underline-offset-8">Gallery</span>
                       </h1>
-                      <p className="text-xl text-slate-400 font-black italic tracking-widest decoration-accent/10 underline decoration-2 underline-offset-4 decoration-2 uppercase mb-2 transition-colors hover:text-slate-600">
+                      <p className="text-lg md:text-xl text-slate-400 font-black italic tracking-widest decoration-accent/10 underline decoration-2 underline-offset-4 decoration-2 uppercase mb-2 transition-colors hover:text-slate-600">
                           30 Years of Procedural Success • Digital Diagnostics
                       </p>
-                      <p className="font-outfit text-3xl text-primary font-black italic tracking-tighter origin-center decoration-slate-900/5 decoration-4 underline-offset-4 scale-x-110">மருத்துவ சிகிச்சை புகைப்படங்கள்</p>
-                      <p className="text-[10px] text-slate-400 font-black uppercase tracking-[0.3em] italic max-w-xl mx-auto leading-relaxed">
-                         Explore our clinical breakthroughs in digital endodontics and complex surgical extractions. Every image represents a journey from pain to a perfect, healthy smile, managed with Dr. Suresh's MDS-level expertise and advanced medical protocols.
+                      <p className="font-outfit text-2xl md:text-3xl text-primary font-black italic tracking-tighter origin-center decoration-slate-900/5 decoration-4 underline-offset-4 md:scale-x-110">மருத்துவ சிகிச்சை புகைப்படங்கள்</p>
+                      <p className="text-[9px] md:text-[10px] text-slate-400 font-black uppercase tracking-[0.3em] italic max-w-xl mx-auto leading-relaxed px-4">
+                         Explore our clinical breakthroughs in digital endodontics and complex surgical extractions. Every image represents a journey from pain to a perfect, healthy smile.
                       </p>
                     </motion.div>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 px-4">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12 px-4">
                     {images.map((item, i) => (
                         <motion.div
                             key={item.id}
                             initial={{ opacity: 0, scale: 0.9, y: 30 }}
                             whileInView={{ opacity: 1, scale: 1, y: 0 }}
                             transition={{ delay: i * 0.1 }}
-                            className="group relative rounded-[48px] overflow-hidden border-[12px] border-white shadow-2xl transition-all duration-700 hover:shadow-primary/10 hover:-translate-y-2 ring-1 ring-slate-900/5 aspect-square min-h-[400px]"
+                            className="group relative rounded-[40px] md:rounded-[48px] overflow-hidden border-[8px] md:border-[12px] border-white shadow-2xl transition-all duration-700 hover:shadow-primary/10 hover:-translate-y-2 ring-1 ring-slate-900/5 aspect-square"
                         >
                             <Image 
                                 src={item.img} 
