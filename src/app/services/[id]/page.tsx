@@ -155,7 +155,7 @@ export default function ServiceDetail({ params }: { params: Promise<{ id: string
                             <div className="space-y-8">
                                 {[
                                     { step: "01", title: "Diagnostic Mapping", text: "Comprehensive digital scans and CBCT history check for procedural safety." },
-                                    { step: "02", title: "Specialized Treatment", text: "Dr. Suresh's MDS-led intervention using international clinical protocols." },
+                                    { step: "02", title: "Specialized Treatment", text: "Dr. Suresh's B.D.S. (Dental Surgeon) led intervention using international clinical protocols." },
                                     { step: "03", title: "Recovery Guidance", text: "Post-procedural mapping and personalized healing protocols for zero-pain recovery." }
                                 ].map((item, i) => (
                                     <div key={i} className="flex gap-8 group">

@@ -37,7 +37,7 @@ const Contact = () => {
                         
                         <div className="space-y-8">
                             {[
-                                { icon: UserCheck, title: "Clinical Specialist", value: "Dr. L. Suresh, MDS", sub: "30+ Years Surgical Experience", color: "primary" },
+                                { icon: UserCheck, title: "Clinical Specialist", value: "Dr. L. Suresh, B.D.S. (Dental Surgeon)", sub: "Reg No. 2799 • 30+ Years Experience", color: "primary" },
                                 { icon: MapPin, title: "Clinical Location", value: "KSV Dental Clinic", sub: "Salem", color: "accent" },
                                 { icon: Phone, title: "Consulting Helpline", value: "+91 94880 21937", sub: "Mon-Sat: 6PM - 8:30PM", color: "primary" },
                             ].map((item, i) => (
@@ -61,42 +61,68 @@ const Contact = () => {
                          </div>
                      </motion.div>
 
-                     <div className="flex flex-col gap-10">
+                      <div className="flex flex-col gap-10">
                         <motion.div 
                            initial={{ opacity: 0, scale: 0.95 }}
                            whileInView={{ opacity: 1, scale: 1 }}
                            className="bg-slate-50 p-6 lg:p-10 rounded-[48px] border border-slate-100/50 shadow-2xl transition-all hover:shadow-primary/5 relative group"
                         >
-                            <div className="absolute top-6 right-6 lg:top-8 lg:right-8 bg-white/40 backdrop-blur-2xl p-3 lg:p-4 rounded-2xl text-accent shadow-2xl transition-transform group-hover:rotate-12">
-                               <MapPin size={24} />
+                            <h2 className="font-outfit text-2xl lg:text-3xl font-black text-primary mb-8 italic tracking-tighter uppercase decoration-slate-900/5 underline decoration-4 underline-offset-8">Our Branches</h2>
+                            
+                            <div className="space-y-8">
+                                {[
+                                    { 
+                                        name: "Modern Theatre Branch", 
+                                        sub: "Yercaud Main Road", 
+                                        address: "Shop No.- TK-3, Venkatathri Nilayam, Yercaud Main Road, Near Modern Theatre, Salem-636008",
+                                        phone: "+91 94880 21937",
+                                        map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31252.17409240897!2d78.173!3d11.69!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3babf16a65bc7919%3A0x49580e7d0408b44a!2sYercaud+Main+Road!5e0"
+                                    },
+                                    { 
+                                        name: "Omalur Branch", 
+                                        sub: "Near Taluk Office", 
+                                        address: "87/6, Swaminathan Complex, near Taluk Office, Omalur",
+                                        phone: "+91 94880 21937",
+                                        map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31252.17409240897!2d78.04!3d11.7!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3babf16a65bc7919%3A0x49580e7d0408b44a!2sOmalur+Taluk+Office!5e0"
+                                    }
+                                ].map((branch, idx) => (
+                                    <div key={idx} className="bg-white p-8 rounded-[32px] border border-slate-100 shadow-xl group/branch">
+                                        <div className="flex justify-between items-start mb-6">
+                                            <div className="flex flex-col">
+                                                <span className="text-xl font-black text-primary tracking-tighter italic group-hover/branch:text-accent transition-colors">{branch.name}</span>
+                                                <span className="text-[8px] font-black text-slate-400 uppercase tracking-[0.3em] mt-1 italic">{branch.sub}</span>
+                                            </div>
+                                            <div className="p-3 bg-accent/5 text-accent rounded-xl group-hover/branch:bg-accent group-hover/branch:text-white transition-all">
+                                                <MapPin size={18} />
+                                            </div>
+                                        </div>
+                                        <div className="w-full h-40 bg-slate-100 rounded-2xl overflow-hidden mb-6 ring-1 ring-slate-900/5">
+                                            <iframe 
+                                                src={branch.map} 
+                                                width="100%" 
+                                                height="100%" 
+                                                style={{ border: 0 }} 
+                                                allowFullScreen 
+                                                loading="lazy" 
+                                            ></iframe>
+                                        </div>
+                                        <div className="flex flex-col gap-4">
+                                            <p className="text-[10px] text-slate-400 font-black uppercase tracking-widest leading-relaxed italic">{branch.address}</p>
+                                            <div className="flex items-center justify-between pt-4 border-t border-slate-50">
+                                                <a href={`tel:${branch.phone.replace(/\s/g, '')}`} className="flex items-center gap-3 text-primary font-black text-sm italic group-hover/branch:text-accent transition-colors">
+                                                    <Phone size={14} className="text-accent" /> {branch.phone}
+                                                </a>
+                                                <Link href="/appointment" className="text-[9px] font-black text-slate-400 uppercase tracking-[0.3em] hover:text-primary transition-colors italic">Book Visit →</Link>
+                                            </div>
+                                        </div>
+                                    </div>
+                                ))}
                             </div>
-                            <h2 className="font-outfit text-2xl lg:text-3xl font-black text-primary mb-8 italic tracking-tighter uppercase decoration-slate-900/5 underline decoration-4 underline-offset-8 pr-12 lg:pr-0">Find The Clinic</h2>
-                           <p className="text-[9px] text-slate-400 font-bold uppercase tracking-widest italic mb-6">Central Clinical Landmark for Advanced Care</p>
-                           <div className="w-full aspect-video bg-white/40 backdrop-blur-3xl rounded-[32px] overflow-hidden shadow-inner border-[8px] border-white italic transition-transform group-hover:scale-[1.01] duration-700">
-                               <iframe 
-                                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d488.35442537239794!2d78.17293520369482!3d11.706067806011859!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3babf16a65bc7919%3A0x49580e7d0408b44a!2sKSV%20Dental%20Clinic!5e0!3m2!1sen!2sin!4v1774692144762!5m2!1sen!2sin" 
-                                 width="100%" 
-                                 height="100%" 
-                                 style={{ border: 0 }} 
-                                 allowFullScreen 
-                                 loading="lazy" 
-                                 referrerPolicy="no-referrer-when-downgrade"
-                               ></iframe>
-                           </div>
-                           <div className="mt-10 flex justify-between items-center group/btn">
-                              <div className="flex flex-col">
-                                 <span className="text-[8px] font-black text-slate-400 uppercase tracking-[0.3em] italic">Open Daily</span>
-                                 <span className="text-xl font-black text-primary italic">6:00 PM - 8:30 PM</span>
-                              </div>
-                              <Link href="/appointment" className="bg-primary text-white p-4 px-8 rounded-[24px] font-black text-xs uppercase italic shadow-2xl shadow-primary/20 hover:-translate-y-1 transition-all flex items-center gap-3">
-                                Start Consultation <ArrowRight className="text-accent group-hover/btn:translate-x-1 transition-transform" size={14} />
-                              </Link>
-                           </div>
-                       </motion.div>
-                       <p className="text-[10px] text-slate-400 font-black uppercase tracking-[0.3em] italic text-center max-w-sm mx-auto leading-relaxed">
-                         Emergency cases handled with priority within clinical hours. For after-hours guidance, please use our online consulting registration for next-day priority.
-                       </p>
-                    </div>
+                        </motion.div>
+                        <p className="text-[10px] text-slate-400 font-black uppercase tracking-[0.3em] italic text-center max-w-sm mx-auto leading-relaxed">
+                          Strategic clinical presence across the region. Both branches follow international procedural safety and digital sterilization modules.
+                        </p>
+                     </div>
                 </div>
             </div>
         </section>

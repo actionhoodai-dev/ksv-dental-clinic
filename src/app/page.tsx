@@ -4,7 +4,7 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { ShieldCheck, Stethoscope, Clock, Phone, ArrowRight, Star, Activity } from 'lucide-react';
+import { ShieldCheck, Stethoscope, Clock, Phone, ArrowRight, Star, Activity, MapPin } from 'lucide-react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 
@@ -36,12 +36,12 @@ const Hero = () => {
                கே.எஸ்.வி பல் மருத்துவமனை
             </p>
             <p className="text-lg text-slate-500 max-w-lg leading-relaxed font-bold uppercase tracking-tighter decoration-accent/10 underline decoration-2 underline-offset-4 decoration-2 italic italic-spacing">
-              Providing medical-grade restorative dentistry under the legacy of Dr. Suresh since 1995. Experience clinical precision and a gentle touch.
+              Providing medical-grade restorative dentistry under the legacy of Dr. L. Suresh since 1995. Experience clinical precision and a gentle touch.
             </p>
           </div>
           <div className="flex flex-wrap gap-8 items-center">
             <Link href="/appointment" className="group relative bg-primary text-white p-6 px-10 rounded-[32px] font-black text-xl shadow-2xl shadow-primary/40 hover:-translate-y-2 transition-all active:scale-95 italic tracking-tight uppercase tracking-widest overflow-hidden">
-               <span className="relative z-10 flex items-center gap-3 text-sm text-balance">Consult Dr. Suresh <ArrowRight className="text-accent transition-transform group-hover:translate-x-2" size={18} /></span>
+               <span className="relative z-10 flex items-center gap-3 text-sm text-balance">Consult Dr. L. Suresh <ArrowRight className="text-accent transition-transform group-hover:translate-x-2" size={18} /></span>
                <div className="absolute inset-0 bg-primary-dark opacity-0 group-hover:opacity-100 transition-opacity"></div>
             </Link> 
           </div>
@@ -132,7 +132,7 @@ const ClinicalTrust = () => {
                             We bridge the gap between traditional expert care and modern digital dentistry. Every procedure is a blend of 3 decades of experience and zero-pain technology. Our specialized focus on Endodontics and Tooth Impaction ensures maximum safety.
                          </p>
                          <p className="text-xs text-slate-400 font-black uppercase tracking-[0.3em] italic mb-4 max-w-md">
-                            KSV Dental Clinic is recognized for its uncompromising sterilization standards and MDS-led surgical expertise. We provide a sanctuary for anxious patients seeking high-grade dental restoration.
+                             KSV Dental Clinic is recognized for its uncompromising sterilization standards and B.D.S. (Dental Surgeon) led surgical expertise. We provide a sanctuary for anxious patients seeking high-grade dental restoration.
                          </p>
                          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-4">
                              {points.map((p, i) => (
@@ -149,6 +149,88 @@ const ClinicalTrust = () => {
                          </div>
                     </motion.div>
                     
+                </div>
+            </div>
+        </section>
+    );
+};
+
+const ClinicalNetwork = () => {
+    const branches = [
+        { 
+            name: "Modern Theatre Branch", 
+            location: "Yercaud Main Road", 
+            address: "Shop No.- TK-3, Venkatathri Nilayam, Yercaud Main Road, Near Modern Theatre, Salem-636008",
+            phone: "+91 94880 21937",
+            hours: "6:00 PM - 8:30 PM",
+            map: "https://www.google.com/maps/search/?api=1&query=Venkatathri+Nilayam+Yercaud+Main+Road+Salem"
+        },
+        { 
+            name: "Omalur Branch", 
+            location: "Near Taluk Office", 
+            address: "87/6, Swaminathan Complex, near Taluk Office, Omalur",
+            phone: "+91 94880 21937",
+            hours: "6:00 PM - 8:30 PM",
+            map: "https://www.google.com/maps/search/?api=1&query=Swaminathan+Complex+Omalur+Taluk+Office"
+        }
+    ];
+
+    return (
+        <section className="py-24 bg-white relative overflow-hidden italic">
+            <div className="container mx-auto px-8 relative z-10">
+                <div className="flex flex-col items-center text-center mb-16">
+                    <h2 className="font-outfit text-4xl lg:text-5xl font-black text-primary leading-[0.9] tracking-tighter italic decoration-slate-900/5 underline decoration-4 underline-offset-[12px] mb-6">
+                        Our <br/><span className="text-accent underline decoration-primary/5 decoration-4">Clinical Network</span>
+                    </h2>
+                    <p className="text-[10px] text-slate-400 font-black uppercase tracking-[0.4em] italic leading-relaxed max-w-lg">
+                        Strategic dental hubs delivering the legacy of Dr. Suresh across Salem and Omalur. Every branch maintains Level 4+ Sterilization standards.
+                    </p>
+                </div>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto">
+                    {branches.map((branch, i) => (
+                        <motion.div 
+                            key={i}
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ delay: i * 0.1 }}
+                            className="bg-slate-50 p-10 rounded-[48px] border border-slate-100 shadow-2xl relative group overflow-hidden"
+                        >
+                            <div className="absolute top-0 right-0 w-32 h-32 bg-accent/5 rounded-full translate-x-12 -translate-y-12 group-hover:bg-accent/10 transition-colors"></div>
+                            <div className="relative z-10">
+                                <div className="flex items-center gap-4 mb-6">
+                                    <div className="p-4 bg-white rounded-2xl shadow-xl text-primary group-hover:bg-accent group-hover:text-white transition-all transform group-hover:rotate-12">
+                                        <MapPin size={24} />
+                                    </div>
+                                    <div className="flex flex-col">
+                                        <span className="text-2xl font-black text-primary tracking-tighter italic leading-none group-hover:text-accent transition-colors">{branch.name}</span>
+                                        <span className="text-[9px] font-black text-slate-400 uppercase tracking-[0.3em] mt-1.5 italic">{branch.location}</span>
+                                    </div>
+                                </div>
+                                <div className="space-y-4 mb-10">
+                                    <div className="flex gap-4 items-start">
+                                        <div className="w-[1px] h-full bg-accent/20"></div>
+                                        <p className="text-[10px] text-slate-500 font-black uppercase tracking-widest leading-relaxed italic">{branch.address}</p>
+                                    </div>
+                                    <div className="flex items-center gap-4">
+                                        <Phone size={14} className="text-accent" />
+                                        <span className="text-sm font-black text-primary italic tracking-tight uppercase group-hover:text-accent transition-colors">{branch.phone}</span>
+                                    </div>
+                                    <div className="flex items-center gap-4">
+                                        <Clock size={14} className="text-slate-400" />
+                                        <span className="text-[8px] font-black text-slate-400 uppercase tracking-[0.4em] italic">{branch.hours}</span>
+                                    </div>
+                                </div>
+                                <div className="flex gap-6">
+                                    <a href={`tel:${branch.phone.replace(/\s/g, '')}`} className="flex-1 bg-primary text-white p-4 rounded-2xl font-black text-xs uppercase italic shadow-xl shadow-primary/20 text-center hover:bg-primary-dark transition-all active:scale-95">
+                                        Call Branch
+                                    </a>
+                                    <a href={branch.map} target="_blank" rel="noopener noreferrer" className="flex-1 bg-white border border-slate-200 p-4 rounded-2xl font-black text-xs text-primary uppercase italic shadow-xl shadow-slate-200/50 text-center hover:border-accent hover:text-accent transition-all active:scale-95">
+                                        Get Directions
+                                    </a>
+                                </div>
+                            </div>
+                        </motion.div>
+                    ))}
                 </div>
             </div>
         </section>
@@ -177,6 +259,7 @@ export default function Home() {
       <Hero />
       <Metrics />
       <ClinicalTrust />
+      <ClinicalNetwork />
       <FinalCTA />
       <Footer />
     </main>

@@ -55,22 +55,34 @@ const Footer = () => {
           <div>
             <h4 className="font-outfit font-black text-[9px] mb-8 uppercase tracking-[0.4em] text-accent">Reach Us</h4>
              <div className="space-y-6">
-                <a href="tel:+919488021937" className="flex gap-4 items-center group cursor-pointer hover:translate-x-1 transition-transform">
+                <div className="flex flex-col gap-4">
+                  <a href="https://www.google.com/maps/search/?api=1&query=Venkatathri+Nilayam+Yercaud+Main+Road+Salem" target="_blank" rel="noopener noreferrer" className="flex gap-4 items-center group cursor-pointer transition-transform hover:translate-x-1">
+                     <div className="p-3 bg-white/5 rounded-xl border border-white/5 transition-transform group-hover:scale-110 group-hover:bg-accent group-hover:border-accent">
+                       <MapPin size={16} className="text-accent group-hover:text-white" />
+                     </div>
+                     <div className="flex flex-col">
+                       <span className="text-white font-black text-sm italic tracking-tight leading-none group-hover:text-accent transition-colors">Modern Theatre Branch</span>
+                       <span className="text-[7px] font-black text-slate-500 uppercase tracking-[0.2em] mt-1 italic leading-none">Yercaud Main Road</span>
+                     </div>
+                  </a>
+                  <a href="https://www.google.com/maps/search/?api=1&query=KSV+Dental+Clinic+Omalur" target="_blank" rel="noopener noreferrer" className="flex gap-4 items-center group cursor-pointer transition-transform hover:translate-x-1">
+                     <div className="p-3 bg-white/5 rounded-xl border border-white/5 transition-transform group-hover:scale-110 group-hover:bg-accent group-hover:border-accent">
+                       <MapPin size={16} className="text-accent group-hover:text-white" />
+                     </div>
+                     <div className="flex flex-col">
+                       <span className="text-white font-black text-sm italic tracking-tight leading-none group-hover:text-accent transition-colors">Omalur Branch</span>
+                       <span className="text-[7px] font-black text-slate-500 uppercase tracking-[0.2em] mt-1 italic leading-none">Near Taluk Office</span>
+                     </div>
+                  </a>
+                </div>
+                
+                <a href="tel:+919488021937" className="flex gap-4 items-center group cursor-pointer hover:translate-x-1 transition-transform pt-4 border-t border-white/5">
                    <div className="p-3 bg-white/5 rounded-xl border border-white/5 transition-transform group-hover:scale-110 group-hover:bg-accent group-hover:border-accent">
                      <Phone size={16} className="text-accent group-hover:text-white" />
                    </div>
                    <div className="flex flex-col">
                      <span className="text-white font-black text-lg italic tracking-wide leading-none group-hover:text-accent transition-colors">+91 94880 21937</span>
-                     <span className="text-[8px] font-black text-slate-500 uppercase tracking-[0.3em] mt-1 leading-none">Mon-Sat: 6PM - 8:30PM</span>
-                   </div>
-                </a>
-                <a href="https://www.google.com/maps/search/?api=1&query=KSV+Dental+Clinic+Salem" target="_blank" rel="noopener noreferrer" className="flex gap-4 items-center group cursor-pointer hover:translate-x-1 transition-transform">
-                   <div className="p-3 bg-white/5 rounded-xl border border-white/5 transition-transform group-hover:scale-110 group-hover:bg-accent group-hover:border-accent">
-                     <MapPin size={16} className="text-accent group-hover:text-white" />
-                   </div>
-                   <div className="flex flex-col">
-                     <span className="text-white font-black text-md italic tracking-tight italic leading-none group-hover:text-accent transition-colors">KSV Dental Clinic</span>
-                     <span className="text-[8px] font-black text-slate-500 uppercase tracking-[0.2em] mt-1 italic leading-none">SALEM</span>
+                     <span className="text-[8px] font-black text-slate-500 uppercase tracking-[0.3em] mt-1 leading-none italic">Mon-Sat: 6PM - 8:30PM</span>
                    </div>
                 </a>
              </div>

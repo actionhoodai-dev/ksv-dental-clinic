@@ -81,7 +81,7 @@ const ServicesListing = () => {
                       </h1>
                       <p className="font-outfit text-xl lg:text-2xl text-primary font-black tracking-tighter opacity-80 decoration-slate-900/5 decoration-4 underline-offset-4 italic">சிறப்பு பல் மருத்துவ சேவைகள்</p>
                       <p className="text-[10px] text-slate-400 font-black uppercase tracking-[0.3em] italic max-w-xl mx-auto leading-relaxed">
-                        Under the expert MDS leadership of Dr. L. Suresh, KSV Dental Clinic provides a full spectrum of high-grade restorative and surgical treatments. We specialize in digital-first procedures that minimize recovery time while maximizing clinical outcomes.
+                        Under the expert leadership of Dr. L. Suresh, B.D.S. (Dental Surgeon), KSV Dental Clinic provides a full spectrum of high-grade restorative and surgical treatments. We specialize in digital-first procedures that minimize recovery time while maximizing clinical outcomes.
                       </p>
                     </motion.div>
                 </div>
