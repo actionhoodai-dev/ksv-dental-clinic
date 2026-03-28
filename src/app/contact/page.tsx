@@ -46,14 +46,14 @@ const Contact = () => {
                                     initial={{ opacity: 0, y: 10 }}
                                     whileInView={{ opacity: 1, y: 0 }}
                                     transition={{ delay: i * 0.1 }}
-                                    className="flex gap-8 items-start group"
+                                    className="flex flex-col sm:flex-row gap-4 sm:gap-8 items-start group"
                                 >
-                                    <div className={`w-14 h-14 bg-${item.color}/10 text-${item.color} flex items-center justify-center rounded-[20px] shadow-2xl transition-transform group-hover:scale-110 shadow-${item.color}/10`}>
+                                    <div className={`w-14 h-14 bg-${item.color}/10 text-${item.color} flex items-center justify-center rounded-[20px] shadow-2xl transition-transform group-hover:scale-110 shadow-${item.color}/10 shrink-0`}>
                                         <item.icon size={24} />
                                     </div>
-                                    <div>
+                                    <div className="flex flex-col">
                                         <p className="font-black text-slate-500 text-[9px] uppercase tracking-[0.4em] mb-2 italic leading-none">{item.title}</p>
-                                         <p className="font-outfit text-xl lg:text-2xl font-black text-primary group-hover:text-accent transition-colors tracking-tighter italic leading-none">{item.value}</p>
+                                         <p className="font-outfit text-xl lg:text-2xl font-black text-primary group-hover:text-accent transition-colors tracking-tighter italic leading-none break-words">{item.value}</p>
                                          <p className="text-[8px] font-black text-slate-400 uppercase tracking-[0.3em] mt-1.5 italic transition-colors hover:text-slate-600 leading-none">{item.sub}</p>
                                      </div>
                                  </motion.div>
@@ -117,12 +117,12 @@ const Contact = () => {
                                         )}
                                         <div className="flex flex-col gap-4">
                                             <p className="text-[10px] text-slate-400 font-black uppercase tracking-widest leading-relaxed italic">{branch.address}</p>
-                                            <div className="flex items-center justify-between pt-4 border-t border-slate-50">
-                                                <a href={`tel:${branch.phone.replace(/\s/g, '')}`} className="flex items-center gap-3 text-primary font-black text-sm italic group-hover/branch:text-accent transition-colors">
-                                                    <Phone size={14} className="text-accent" /> {branch.phone}
-                                                </a>
-                                                <Link href="/appointment" className="text-[9px] font-black text-slate-400 uppercase tracking-[0.3em] hover:text-primary transition-colors italic">Book Visit →</Link>
-                                            </div>
+                                        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pt-4 border-t border-slate-50">
+                                            <a href={`tel:${branch.phone.replace(/\s/g, '')}`} className="flex items-center gap-3 text-primary font-black text-sm italic group-hover/branch:text-accent transition-colors">
+                                                <Phone size={14} className="text-accent" /> {branch.phone}
+                                            </a>
+                                            <Link href="/appointment" className="text-[9px] font-black text-slate-400 uppercase tracking-[0.3em] hover:text-primary transition-colors italic">Book Visit →</Link>
+                                        </div>
                                         </div>
                                     </div>
                                 ))}

@@ -68,10 +68,12 @@ const Appointment = () => {
                 </motion.div>
 
                 <div className="lg:w-1/2 bg-slate-50 p-10 rounded-[48px] border border-slate-100/50 shadow-2xl relative group ring-1 ring-slate-900/5">
-                    <div className="absolute top-8 right-8 bg-white/40 backdrop-blur-2xl p-4 rounded-2xl text-accent shadow-2xl transition-transform group-hover:rotate-12 z-20">
-                        <Calendar size={24} />
-                    </div>
-                    <h2 className="font-outfit text-2xl font-black text-primary mb-10 italic tracking-tighter uppercase decoration-slate-900/5 underline decoration-4 underline-offset-8 relative z-10">Consulting Form</h2>
+                        <div className="flex justify-between items-start mb-10 relative z-20">
+                            <h2 className="font-outfit text-2xl lg:text-3xl font-black text-primary italic tracking-tighter uppercase decoration-slate-900/5 underline decoration-4 underline-offset-8">Consulting Form</h2>
+                            <div className="bg-white/40 backdrop-blur-2xl p-4 rounded-2xl text-accent shadow-2xl transition-transform group-hover:rotate-12 hidden sm:block">
+                                <Calendar size={24} />
+                            </div>
+                        </div>
                     
                     <form className="space-y-8 relative z-10">
                         <div className="space-y-6">

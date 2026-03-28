@@ -220,11 +220,11 @@ const ClinicalNetwork = () => {
                                         <span className="text-[8px] font-black text-slate-400 uppercase tracking-[0.4em] italic">{branch.hours}</span>
                                     </div>
                                 </div>
-                                <div className="flex gap-6">
-                                    <a href={`tel:${branch.phone.replace(/\s/g, '')}`} className="flex-1 bg-primary text-white p-4 rounded-2xl font-black text-xs uppercase italic shadow-xl shadow-primary/20 text-center hover:bg-primary-dark transition-all active:scale-95">
+                                <div className="flex flex-col sm:flex-row gap-4">
+                                    <a href={`tel:${branch.phone.replace(/\s/g, '')}`} className="flex-1 bg-primary text-white p-4 rounded-2xl font-black text-[10px] uppercase italic shadow-xl shadow-primary/20 text-center hover:bg-primary-dark transition-all active:scale-95">
                                         Call Branch
                                     </a>
-                                    <a href={branch.map} target="_blank" rel="noopener noreferrer" className="flex-1 bg-white border border-slate-200 p-4 rounded-2xl font-black text-xs text-primary uppercase italic shadow-xl shadow-slate-200/50 text-center hover:border-accent hover:text-accent transition-all active:scale-95">
+                                    <a href={branch.map} target="_blank" rel="noopener noreferrer" className="flex-1 bg-white border border-slate-200 p-4 rounded-2xl font-black text-[10px] text-primary uppercase italic shadow-xl shadow-slate-200/50 text-center hover:border-accent hover:text-accent transition-all active:scale-95">
                                         Get Directions
                                     </a>
                                 </div>
