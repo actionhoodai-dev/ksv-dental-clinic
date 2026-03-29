@@ -30,9 +30,11 @@ export async function sendClinicalEmail(formData: FormData) {
     });
 
     if (error) {
+      console.error('Clinical Communication Error:', error);
       return { success: false, error };
     }
 
+    console.log('Clinical Inquiry Delivered to Inbox:', data?.id);
     return { success: true, data };
   } catch (err) {
     return { success: false, error: err };

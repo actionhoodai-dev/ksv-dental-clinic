@@ -3,13 +3,15 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { Calendar, User, Phone, CheckCircle, ShieldCheck, Star, ArrowRight } from 'lucide-react';
+import { Calendar, User, Phone, CheckCircle, ShieldCheck, Star, ArrowRight, X } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { sendClinicalEmail } from '@/app/actions/email';
 
 const Appointment = () => {
+    const [status, setStatus] = React.useState<'idle' | 'sending' | 'success' | 'error'>('idle');
+    
     return (
         <section className="py-20 lg:py-24 bg-white relative overflow-hidden italic">
             <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-primary/5 blur-[200px] rounded-full translate-x-1/2 -translate-y-1/2 -z-10 animate-pulse"></div>
@@ -77,22 +79,51 @@ const Appointment = () => {
                         </div>
                     
                     <form action={async (formData) => {
+                           setStatus('sending');
                            const res = await sendClinicalEmail(formData);
                            if (res.success) {
-                               alert('Clinical Appointment Request Sent Successfully!');
+                               setStatus('success');
                            } else {
-                               alert('Clinical communication error. Please call the branch directly.');
+                               setStatus('error');
                            }
                         }}
                         className="space-y-8 relative z-10"
                     >
+                        <AnimatePresence>
+                            {status === 'success' && (
+                                <motion.div 
+                                    initial={{ opacity: 0, y: -20 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    className="bg-green-50/50 border border-green-200/50 p-6 rounded-[24px] flex items-center gap-4 text-green-600 mb-6"
+                                >
+                                    <CheckCircle size={24} />
+                                    <div className="flex flex-col">
+                                        <span className="font-black text-xs uppercase tracking-widest italic">Clinical Inquiry Sent</span>
+                                        <span className="text-[10px] font-bold opacity-80 uppercase leading-none mt-1">We will contact you for confirmation.</span>
+                                    </div>
+                                </motion.div>
+                            )}
+                            {status === 'error' && (
+                                <motion.div 
+                                    initial={{ opacity: 0, y: -20 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    className="bg-red-50/50 border border-red-200/50 p-6 rounded-[24px] flex items-center gap-4 text-red-600 mb-6"
+                                >
+                                    <ShieldCheck size={24} />
+                                    <div className="flex flex-col">
+                                        <span className="font-black text-xs uppercase tracking-widest italic">Communication Error</span>
+                                        <span className="text-[10px] font-bold opacity-80 uppercase leading-none mt-1">Please call our branch helpline.</span>
+                                    </div>
+                                </motion.div>
+                            )}
+                        </AnimatePresence>
                         <div className="space-y-6">
                             {[
                                 { icon: User, label: "Full Name", placeholder: "Patient Name", name: "name" },
                                 { icon: Phone, label: "Phone Number", placeholder: "+91", name: "phone" },
                             ].map((field, idx) => (
                                 <div key={idx} className="flex flex-col gap-3 group">
-                                    <label className="font-black text-slate-400 text-[9px] uppercase tracking-[0.4em] italic mb-1 group-focus-within:text-accent transition-colors">
+                                    <label className="font-black text-slate-600 text-[10px] uppercase tracking-[0.4em] italic mb-2 group-focus-within:text-accent transition-colors">
                                         {field.label}
                                     </label>
                                     <div className="relative">
@@ -104,14 +135,14 @@ const Appointment = () => {
                                             name={field.name}
                                             required
                                             placeholder={field.placeholder}
-                                            className="w-full bg-white p-6 pl-14 rounded-[24px] border border-slate-100 shadow-inner focus:ring-4 focus:ring-accent/10 focus:border-accent transition-all font-black text-lg italic tracking-tighter placeholder:opacity-30"
+                                            className="w-full bg-white p-6 pl-14 rounded-[24px] border border-slate-200 shadow-sm focus:ring-4 focus:ring-accent/10 focus:border-accent transition-all font-black text-lg italic tracking-tighter text-primary placeholder:text-slate-300"
                                         />
                                     </div>
                                 </div>
                             ))}
                             <div className="flex flex-col gap-3 group">
-                                <label className="font-black text-slate-400 text-[9px] uppercase tracking-[0.4em] italic mb-1 group-hover:text-accent transition-colors">Select Procedure</label>
-                                <select name="procedure" className="w-full bg-white p-6 rounded-[24px] border border-slate-100 shadow-inner focus:ring-4 focus:ring-accent/10 focus:border-accent transition-all font-black text-lg italic tracking-tighter appearance-none cursor-pointer">
+                                <label className="font-black text-slate-600 text-[10px] uppercase tracking-[0.4em] italic mb-2 group-hover:text-accent transition-colors">Select Procedure</label>
+                                <select name="procedure" className="w-full bg-white p-6 rounded-[24px] border border-slate-200 shadow-sm focus:ring-4 focus:ring-accent/10 focus:border-accent transition-all font-black text-lg italic tracking-tighter appearance-none cursor-pointer text-primary">
                                     <option>General Checkup</option>
                                     <option>Root Canal</option>
                                     <option>Dental Implants</option>
@@ -120,8 +151,14 @@ const Appointment = () => {
                                 </select>
                             </div>
                         </div>
-                        <button type="submit" className="w-full bg-primary text-white p-6 rounded-[24px] font-black text-lg shadow-2xl shadow-primary/30 hover:-translate-y-2 transition-all active:scale-95 italic-spacing tracking-tight uppercase tracking-widest flex items-center justify-center gap-3 group/btn">
-                           Register Visit <ArrowRight className="text-accent group-hover/btn:translate-x-1 transition-transform" size={18} />
+                        <button 
+                            type="submit" 
+                            disabled={status === 'sending' || status === 'success'}
+                            className="w-full bg-primary text-white p-6 rounded-[24px] font-black text-lg shadow-2xl shadow-primary/30 hover:-translate-y-2 transition-all active:scale-95 italic-spacing tracking-tight uppercase tracking-widest flex items-center justify-center gap-3 group/btn disabled:opacity-50 disabled:cursor-not-allowed"
+                        >
+                           {status === 'sending' ? 'Transmitting...' : status === 'success' ? 'Inquiry Delivered' : (
+                               <>Register Visit <ArrowRight className="text-accent group-hover/btn:translate-x-1 transition-transform" size={18} /></>
+                           )}
                         </button>
                     </form>
                 </div>
