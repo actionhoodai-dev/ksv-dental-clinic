@@ -38,7 +38,7 @@ const Contact = () => {
                         <div className="space-y-8">
                             {[
                                 { icon: UserCheck, title: "Clinical Specialist", value: "Dr. L. Suresh, B.D.S. (Dental Surgeon)", sub: "Reg No. 2799 • 30+ Years Experience", color: "primary" },
-                                { icon: MapPin, title: "Clinical Location", value: "KSV Dental Clinic", sub: "Salem", color: "accent" },
+                                { icon: Mail, title: "Clinical Email", value: "ksvdentalclinicsalem@gmail.com", sub: "Official Inquiry Channel", color: "accent" },
                                 { icon: Phone, title: "Consulting Helpline", value: "+91 94880 21937", sub: "Mon-Sat: 6PM - 8:30PM", color: "primary" },
                             ].map((item, i) => (
                                 <motion.div 
@@ -132,8 +132,17 @@ const Contact = () => {
                           Strategic clinical presence across the region. Both branches follow international procedural safety and digital sterilization modules.
                         </p>
                      </div>
-                </div>
-            </div>
+                   <a href="mailto:ksvdentalclinicsalem@gmail.com" className="flex gap-4 items-center group cursor-pointer hover:translate-x-1 transition-transform pt-4 border-t border-white/5">
+                    <div className="p-3 bg-white/5 rounded-xl border border-white/5 transition-transform group-hover:scale-110 group-hover:bg-accent group-hover:border-accent">
+                      <Mail size={16} className="text-accent group-hover:text-white" />
+                    </div>
+                    <div className="flex flex-col">
+                      <span className="text-white font-black text-sm italic tracking-tight leading-none group-hover:text-accent transition-colors truncate max-w-[200px]">ksvdentalclinicsalem@gmail.com</span>
+                      <span className="text-[8px] font-black text-slate-500 uppercase tracking-[0.3em] mt-1.5 leading-none italic">Official Clinical Email</span>
+                    </div>
+                 </a>
+              </div>
+           </div>
         </section>
     );
 };

@@ -7,6 +7,7 @@ import { motion } from 'framer-motion';
 import { Calendar, User, Phone, CheckCircle, ShieldCheck, Star, ArrowRight } from 'lucide-react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import { sendClinicalEmail } from '@/app/actions/email';
 
 const Appointment = () => {
     return (
@@ -75,7 +76,16 @@ const Appointment = () => {
                             </div>
                         </div>
                     
-                    <form className="space-y-8 relative z-10">
+                    <form action={async (formData) => {
+                           const res = await sendClinicalEmail(formData);
+                           if (res.success) {
+                               alert('Clinical Appointment Request Sent Successfully!');
+                           } else {
+                               alert('Clinical communication error. Please call the branch directly.');
+                           }
+                        }}
+                        className="space-y-8 relative z-10"
+                    >
                         <div className="space-y-6">
                             {[
                                 { icon: User, label: "Full Name", placeholder: "Patient Name", name: "name" },
@@ -91,6 +101,8 @@ const Appointment = () => {
                                         </div>
                                         <input 
                                             type="text" 
+                                            name={field.name}
+                                            required
                                             placeholder={field.placeholder}
                                             className="w-full bg-white p-6 pl-14 rounded-[24px] border border-slate-100 shadow-inner focus:ring-4 focus:ring-accent/10 focus:border-accent transition-all font-black text-lg italic tracking-tighter placeholder:opacity-30"
                                         />
@@ -99,7 +111,7 @@ const Appointment = () => {
                             ))}
                             <div className="flex flex-col gap-3 group">
                                 <label className="font-black text-slate-400 text-[9px] uppercase tracking-[0.4em] italic mb-1 group-hover:text-accent transition-colors">Select Procedure</label>
-                                <select className="w-full bg-white p-6 rounded-[24px] border border-slate-100 shadow-inner focus:ring-4 focus:ring-accent/10 focus:border-accent transition-all font-black text-lg italic tracking-tighter appearance-none cursor-pointer">
+                                <select name="procedure" className="w-full bg-white p-6 rounded-[24px] border border-slate-100 shadow-inner focus:ring-4 focus:ring-accent/10 focus:border-accent transition-all font-black text-lg italic tracking-tighter appearance-none cursor-pointer">
                                     <option>General Checkup</option>
                                     <option>Root Canal</option>
                                     <option>Dental Implants</option>
@@ -108,7 +120,7 @@ const Appointment = () => {
                                 </select>
                             </div>
                         </div>
-                        <button className="w-full bg-primary text-white p-6 rounded-[24px] font-black text-lg shadow-2xl shadow-primary/30 hover:-translate-y-2 transition-all active:scale-95 italic-spacing tracking-tight uppercase tracking-widest flex items-center justify-center gap-3 group/btn">
+                        <button type="submit" className="w-full bg-primary text-white p-6 rounded-[24px] font-black text-lg shadow-2xl shadow-primary/30 hover:-translate-y-2 transition-all active:scale-95 italic-spacing tracking-tight uppercase tracking-widest flex items-center justify-center gap-3 group/btn">
                            Register Visit <ArrowRight className="text-accent group-hover/btn:translate-x-1 transition-transform" size={18} />
                         </button>
                     </form>
