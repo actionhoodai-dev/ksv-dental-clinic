@@ -36,12 +36,12 @@ const Hero = () => {
                கே.எஸ்.வி பல் மருத்துவமனை
             </p>
             <p className="text-lg text-slate-500 max-w-lg leading-relaxed font-bold uppercase tracking-tighter decoration-accent/10 underline decoration-2 underline-offset-4 decoration-2 italic italic-spacing">
-              Providing medical-grade restorative dentistry under the legacy of Dr. L. Suresh since 1995. Experience clinical precision and a gentle touch.
+              Providing medical-grade restorative dentistry under the legacy of Dr. L. Suresh, BDS (Dental Surgeon) since 1995. Experience clinical precision and a gentle touch.
             </p>
           </div>
           <div className="flex flex-wrap gap-8 items-center">
             <Link href="/appointment" className="group relative bg-primary text-white p-6 px-10 rounded-[32px] font-black text-xl shadow-2xl shadow-primary/40 hover:-translate-y-2 transition-all active:scale-95 italic tracking-tight uppercase tracking-widest overflow-hidden">
-               <span className="relative z-10 flex items-center gap-3 text-sm text-balance">Consult Dr. L. Suresh <ArrowRight className="text-accent transition-transform group-hover:translate-x-2" size={18} /></span>
+               <span className="relative z-10 flex items-center gap-3 text-sm text-balance">Consult Dr. L. Suresh, BDS <ArrowRight className="text-accent transition-transform group-hover:translate-x-2" size={18} /></span>
                <div className="absolute inset-0 bg-primary-dark opacity-0 group-hover:opacity-100 transition-opacity"></div>
             </Link> 
           </div>
@@ -80,7 +80,7 @@ const Metrics = () => {
   const data = [
     { title: "Specialties", value: "12+", icon: Stethoscope },
     { title: "Surgical Success", value: "1,000+", icon: ShieldCheck },
-    { title: "Consulting Hours", value: "6PM - 8:30PM", icon: Clock },
+    { title: "Consulting Hours", value: "Check Branches", icon: Clock },
     { title: "Clinical Standards", value: "9+ STARS", icon: Star },
   ];
 
@@ -170,7 +170,7 @@ const ClinicalNetwork = () => {
             location: "Near Taluk Office", 
             address: "87/6, Swaminathan Complex, near Taluk Office, Omalur",
             phone: "+91 94880 21937",
-            hours: "6:00 PM - 8:30 PM",
+            hours: "10:00 AM - 2:00 PM",
             map: "https://www.google.com/maps/search/?api=1&query=Swaminathan+Complex+Omalur+Taluk+Office"
         }
     ];
@@ -183,7 +183,7 @@ const ClinicalNetwork = () => {
                         Our <br/><span className="text-accent underline decoration-primary/5 decoration-4">Clinical Network</span>
                     </h2>
                     <p className="text-[10px] text-slate-400 font-black uppercase tracking-[0.4em] italic leading-relaxed max-w-lg">
-                        Strategic dental hubs delivering the legacy of Dr. Suresh across Salem and Omalur. Every branch maintains Level 4+ Sterilization standards.
+                        Strategic dental hubs delivering the legacy of Dr. Suresh, BDS across Salem and Omalur. Every branch maintains Level 4+ Sterilization standards.
                     </p>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto">
@@ -245,7 +245,7 @@ const FinalCTA = () => (
                 Ready for a <br/><span className="text-accent underline decoration-white/10 decoration-4 underline-offset-[12px]">Healthy Smile?</span>
             </h2>
             <Link href="/appointment" className="inline-flex bg-accent text-white p-6 px-10 rounded-[32px] font-black text-xl shadow-2xl shadow-accent/40 hover:-translate-y-2 transition-all active:scale-95 italic tracking-tight uppercase tracking-widest decoration-white/10 underline decoration-2 underline-offset-8">
-               Consult Dr. Suresh
+               Consult Dr. L. Suresh, BDS
             </Link>
             <p className="mt-12 text-white/40 text-[10px] uppercase font-black tracking-[0.4em] italic leading-relaxed">Trusted Dental Care Since 1995 • Specialist Clinical Excellence</p>
         </div>

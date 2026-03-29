@@ -29,7 +29,7 @@ const Contact = () => {
                             Let's <br/><span className="text-accent underline decoration-primary/5 decoration-4">Connect</span>
                         </h1>
                         <p className="text-lg text-slate-400 font-bold uppercase tracking-tighter decoration-accent/10 underline decoration-2 underline-offset-4 decoration-2 max-w-lg leading-relaxed italic italic-spacing transition-colors hover:text-slate-600">
-                             Visit us for world-class dental care in a comfortable environment. Professional treatments with Dr. Suresh's 30 years of expertise and international-standard sterilization.
+                             Visit us for world-class dental care in a comfortable environment. Professional treatments with Dr. Suresh, BDS's 30 years of expertise and international-standard sterilization.
                         </p>
                         <p className="text-[10px] text-slate-400 font-black uppercase tracking-[0.3em] italic mb-4 max-w-md leading-relaxed">
                             Located centrally for your convenience, KSV Dental Clinic is the region's benchmark for specialized restorative care. We ensure every patient receives personalized diagnostic mapping before any procedure begins.
@@ -37,9 +37,9 @@ const Contact = () => {
                         
                         <div className="space-y-8">
                             {[
-                                { icon: UserCheck, title: "Clinical Specialist", value: "Dr. L. Suresh, B.D.S. (Dental Surgeon)", sub: "Reg No. 2799 • 30+ Years Experience", color: "primary" },
+                                { icon: UserCheck, title: "Clinical Specialist", value: "Dr. L. Suresh, BDS (Dental Surgeon)", sub: "Reg No. 2799 • 30+ Years Experience", color: "primary" },
                                 { icon: Mail, title: "Clinical Email", value: "ksvdentalclinicsalem@gmail.com", sub: "Official Inquiry Channel", color: "accent" },
-                                { icon: Phone, title: "Consulting Helpline", value: "+91 94880 21937", sub: "Mon-Sat: 6PM - 8:30PM", color: "primary" },
+                                { icon: Phone, title: "Consulting Helpline", value: "+91 94880 21937", sub: "Mon-Sat: Check Branches", color: "primary" },
                             ].map((item, i) => (
                                 <motion.div 
                                     key={i}

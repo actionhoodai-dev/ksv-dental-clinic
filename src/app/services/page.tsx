@@ -81,7 +81,7 @@ const ServicesListing = () => {
                       </h1>
                       <p className="font-outfit text-xl lg:text-2xl text-primary font-black tracking-tighter opacity-80 decoration-slate-900/5 decoration-4 underline-offset-4 italic">சிறப்பு பல் மருத்துவ சேவைகள்</p>
                       <p className="text-[10px] text-slate-400 font-black uppercase tracking-[0.3em] italic max-w-xl mx-auto leading-relaxed">
-                        Under the expert leadership of Dr. L. Suresh, B.D.S. (Dental Surgeon), KSV Dental Clinic provides a full spectrum of high-grade restorative and surgical treatments. We specialize in digital-first procedures that minimize recovery time while maximizing clinical outcomes.
+                        Under the expert leadership of Dr. L. Suresh, BDS (Dental Surgeon), KSV Dental Clinic provides a full spectrum of high-grade restorative and surgical treatments. We specialize in digital-first procedures that minimize recovery time while maximizing clinical outcomes.
                       </p>
                     </motion.div>
                 </div>
@@ -143,13 +143,13 @@ const ServicesListing = () => {
                       <div className="absolute -top-6 -left-6 bg-accent text-white p-4 rounded-2xl shadow-xl transition-transform group-hover:rotate-12">
                          <ShieldCheck size={24} />
                       </div>
-                      <h4 className="font-outfit text-2xl font-black text-primary mb-4 italic tracking-tighter">Clinical Assurance</h4>
+                      <p className="text-xl font-black text-primary italic tracking-tight uppercase leading-none mt-2">Dr. L. Suresh, BDS (Dental Surgeon)</p>
                       <p className="text-[10px] text-slate-400 font-bold uppercase tracking-[0.3em] italic leading-relaxed">
-                        Every service listed is performed under Dr. Suresh's direct supervision, utilizing biocompatible materials and digital diagnostics to ensure international standards of dental healthcare.
+                        Every service listed is performed under Dr. Suresh, BDS's direct supervision, utilizing biocompatible materials and digital diagnostics to ensure international standards of dental healthcare.
                       </p>
                    </div>
                    <Link href="/appointment" className="bg-primary text-white p-8 px-12 rounded-[32px] font-black text-2xl shadow-2xl shadow-primary/30 hover:-translate-y-2 transition-all active:scale-95 italic-spacing tracking-tight uppercase tracking-widest decoration-white/10 underline decoration-2 underline-offset-6">
-                     Consult Dr. Suresh
+                     Consult Dr. Suresh, BDS
                    </Link>
                 </div>
             </div>

@@ -32,11 +32,11 @@ const About = () => {
                கே.எஸ்.வி பல் மருத்துவமனை
             </p>
             <p className="text-lg text-slate-500 max-w-lg leading-relaxed font-bold uppercase tracking-tighter decoration-accent/10 underline decoration-2 underline-offset-4 decoration-2 italic italic-spacing selection:bg-accent/20">
-              Founded in 1995 with a vision to provide specialized dental care, KSV Dental Clinic has become a benchmark for medical excellence. Under the leadership of Dr. L. Suresh, B.D.S. (Dental Surgeon), we integrate 3 decades of expertise with modern digital precision.
+              Founded in 1995 with a vision to provide specialized dental care, KSV Dental Clinic has become a benchmark for medical excellence. Under the leadership of Dr. L. Suresh, BDS (Dental Surgeon), we integrate 3 decades of expertise with modern digital precision.
             </p>
             <div className="space-y-4">
                <p className="text-[10px] text-slate-400 font-black uppercase tracking-[0.3em] italic leading-relaxed">
-                 Dr. Suresh's journey began with a commitment to pain-free dentistry. Over 30 years, he has successfully treated thousands of complex endodontic and surgical extraction cases, carving a niche in high-grade restorative treatments in the region.
+                 Dr. Suresh, BDS's journey began with a commitment to pain-free dentistry. Over 30 years, he has successfully treated thousands of complex endodontic and surgical extraction cases, carving a niche in high-grade restorative treatments in the region.
                </p>
                <p className="text-[10px] text-slate-400 font-black uppercase tracking-[0.3em] italic leading-relaxed border-l-2 border-accent pl-4">
                  Our mission is simple: to provide international-standard dental care with a gentle touch. We believe that every patient deserves a safe, sterile, and anxiety-free clinical environment.
@@ -76,7 +76,7 @@ const About = () => {
           <div className="absolute -bottom-8 -left-8 bg-white p-10 rounded-[48px] shadow-2xl border border-slate-50 z-20 transition-transform hover:scale-110 duration-500 shadow-primary/10">
              <ShieldCheck size={40} className="text-primary group-hover:text-accent transition-colors" />
              <div className="mt-4">
-               <span className="text-2xl font-black text-primary tracking-tighter truncate italic block">Dr. L. Suresh, B.D.S. (Dental Surgeon)</span>
+               <span className="text-2xl font-black text-primary tracking-tighter truncate italic block">Dr. L. Suresh, BDS (Dental Surgeon)</span>
                <span className="text-[8px] font-black text-slate-400 uppercase tracking-[0.4em] block mt-1">Lead Dental Surgeon</span>
              </div>
           </div>

@@ -155,7 +155,7 @@ export default function ServiceDetail({ params }: { params: Promise<{ id: string
                             <div className="space-y-8">
                                 {[
                                     { step: "01", title: "Diagnostic Mapping", text: "Comprehensive digital scans and CBCT history check for procedural safety." },
-                                    { step: "02", title: "Specialized Treatment", text: "Dr. Suresh's B.D.S. (Dental Surgeon) led intervention using international clinical protocols." },
+                                    { step: "02", title: "Specialized Treatment", text: "Dr. Suresh, BDS (Dental Surgeon) led intervention using international clinical protocols." },
                                     { step: "03", title: "Recovery Guidance", text: "Post-procedural mapping and personalized healing protocols for zero-pain recovery." }
                                 ].map((item, i) => (
                                     <div key={i} className="flex gap-8 group">
@@ -182,7 +182,7 @@ export default function ServiceDetail({ params }: { params: Promise<{ id: string
                                 {[
                                     "High-grade clinical protocols for all tools",
                                     "Bio-compatible materials (Zirconia/E-max)",
-                                    "Dr. Suresh's direct surgical supervision",
+                                    "Dr. Suresh, BDS's direct surgical supervision",
                                     "Advanced anxiety-free surgical modules",
                                     "Long-term restoration sustainability focus"
                                 ].map((text, i) => (
@@ -205,7 +205,7 @@ export default function ServiceDetail({ params }: { params: Promise<{ id: string
                        Start Your <br/><span className="text-accent underline decoration-white/10 decoration-4">Recovery Today</span>
                     </h2>
                     <Link href="/appointment" className="inline-flex bg-accent text-white p-8 px-16 rounded-[40px] font-black text-2xl shadow-2xl shadow-accent/40 hover:-translate-y-2 transition-all active:scale-95 italic-spacing tracking-tight uppercase tracking-widest decoration-white/10 underline decoration-2 underline-offset-4">
-                        Consult Dr. Suresh
+                        Consult Dr. Suresh, BDS
                     </Link>
                     <p className="mt-12 text-white/40 text-[9px] uppercase font-black tracking-[0.4em] italic mb-2 leading-relaxed">Trusted Dental Care Since 1995 • Specialist Clinical Excellence • Salem</p>
                  </div>

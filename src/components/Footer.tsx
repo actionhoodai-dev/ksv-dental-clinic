@@ -82,7 +82,7 @@ const Footer = () => {
                    </div>
                    <div className="flex flex-col">
                      <span className="text-white font-black text-lg italic tracking-wide leading-none group-hover:text-accent transition-colors">+91 94880 21937</span>
-                     <span className="text-[8px] font-black text-slate-500 uppercase tracking-[0.3em] mt-1 leading-none italic">Mon-Sat: 6PM - 8:30PM</span>
+                     <span className="text-[8px] font-black text-slate-500 uppercase tracking-[0.3em] mt-1 leading-none italic">Mon-Sat: Check Branches</span>
                    </div>
                 </a>
              </div>

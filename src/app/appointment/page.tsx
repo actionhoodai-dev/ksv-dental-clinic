@@ -31,7 +31,7 @@ const Appointment = () => {
                         Gentle <br/><span className="text-accent underline decoration-primary/5 decoration-4">Priority Consultation</span>
                     </h1>
                     <p className="text-lg text-slate-400 font-bold uppercase tracking-tighter decoration-accent/10 underline decoration-2 underline-offset-4 decoration-2 max-w-lg leading-relaxed italic italic-spacing">
-                        Register for a professional consultation with Dr. L. Suresh, B.D.S. (Dental Surgeon). We prioritize clinical excellence and procedural safety for every patient with 3 decades of surgical legacy.
+                        Register for a professional consultation with Dr. L. Suresh, BDS (Dental Surgeon). We prioritize clinical excellence and procedural safety for every patient with 3 decades of surgical legacy.
                     </p>
                     <p className="text-[10px] text-slate-400 font-black uppercase tracking-[0.3em] italic mb-4 max-w-md leading-relaxed">
                         By registering online, you ensure a priority diagnostic window. We recommend arriving 10 minutes early for initial bio-compatibility screening and digital history mapping. Our clinic follows Level 4 Sterilization for every consultation.
@@ -65,7 +65,7 @@ const Appointment = () => {
                     <div className="mt-10 p-8 bg-slate-50 rounded-[40px] border border-slate-100/50 italic group">
                        <h4 className="font-outfit text-xl font-black text-primary mb-3 tracking-tighter decoration-accent/10 underline decoration-2 underline-offset-4">Clinical Preparedness</h4>
                        <p className="text-[9px] text-slate-400 font-black uppercase tracking-[0.2em] leading-relaxed">
-                         Please carry any previous dental X-rays or medical reports. For pediatric consultations, ensure the child is relaxed; our staff specializes in clinical anxiety management modules. Open Mon-Sat: 6:00 PM - 8:30 PM.
+                         Please carry any previous dental X-rays or medical reports. For pediatric consultations, ensure the child is relaxed; our staff specializes in clinical anxiety management modules. Open Mon-Sat: 6:00 PM - 8:30 PM (Salem) & 10:00 AM - 2:00 PM (Omalur).
                        </p>
                     </div>
                 </motion.div>

@@ -35,7 +35,7 @@ const Gallery = () => {
                   </p>
                   <p className="font-outfit text-xl lg:text-2xl text-primary font-black italic tracking-tighter origin-center decoration-slate-900/5 decoration-4 underline-offset-4 md:scale-x-110">மருத்துவ சிகிச்சை விவரங்கள்</p>
                   <p className="text-[9px] md:text-[10px] text-slate-400 font-black uppercase tracking-[0.3em] italic max-w-xl mx-auto leading-relaxed px-4">
-                     Explore the specialized tools and pristine environment behind our clinical excellence. Every detail is managed with Dr. Suresh's B.D.S. (Dental Surgeon) expertise and strict hygiene protocols.
+                     Explore the specialized tools and pristine environment behind our clinical excellence. Every detail is managed with Dr. Suresh, BDS (Dental Surgeon) expertise and strict hygiene protocols.
                   </p>
                 </motion.div>
             </div>

@@ -15,7 +15,7 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: "KSV Dental Clinic | Dr. L. Suresh | 30 Years of Clinical Excellence",
+   title: "KSV Dental Clinic | Dr. L. Suresh, BDS | 30 Years of Clinical Excellence",
   description: "Experience world-class dental care at KSV Dental Clinic. Specializing in Root Canal, Dental Implants, Orthodontics, and more. Modern technology meets decades of expertise.",
   icons: {
     icon: "/favicon.ico",
