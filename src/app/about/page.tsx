@@ -31,10 +31,10 @@ const About = () => {
             <p className="font-outfit text-xl lg:text-2xl text-primary font-black tracking-tighter opacity-80 decoration-slate-900/5 decoration-4 underline-offset-8 italic">
                கே.எஸ்.வி பல் மருத்துவமனை
             </p>
-            <p className="text-lg text-slate-500 max-w-lg leading-relaxed font-bold uppercase tracking-tighter decoration-accent/10 underline decoration-2 underline-offset-4 decoration-2 italic italic-spacing selection:bg-accent/20">
+            <p className="text-lg text-slate-500 max-w-2xl leading-relaxed font-bold uppercase tracking-tighter decoration-accent/10 underline decoration-2 underline-offset-4 decoration-2 italic italic-spacing selection:bg-accent/20 text-justify">
               Founded in 1995 with a vision to provide specialized dental care, KSV Dental Clinic has become a benchmark for medical excellence. Under the leadership of Dr. L. Suresh, BDS (Dental Surgeon), we integrate 3 decades of expertise with modern digital precision.
             </p>
-            <div className="space-y-4 text-slate-400 font-black uppercase tracking-[0.3em] italic leading-relaxed text-center max-w-2xl mx-auto">
+            <div className="space-y-4 text-slate-400 font-black uppercase tracking-[0.3em] italic leading-relaxed text-justify max-w-2xl mx-auto">
                <p>
                  Dr. Suresh, BDS's journey began with a commitment to pain-free dentistry. Over 30 years, he has successfully treated thousands of complex endodontic and surgical extraction cases, carving a niche in high-grade restorative treatments in the region.
                </p>
