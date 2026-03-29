@@ -12,11 +12,11 @@ const About = () => {
   return (
     <section className="bg-white py-20 lg:py-24 relative overflow-hidden italic">
       <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-primary/5 blur-[200px] rounded-full translate-x-1/2 -translate-y-1/2 -z-10 animate-pulse"></div>
-      <div className="container mx-auto px-8 relative z-10 flex flex-col lg:flex-row gap-16 items-center">
+      <div className="container mx-auto px-8 relative z-10 flex flex-col items-center">
         <motion.div 
-          initial={{ opacity: 0, x: -50 }}
-          animate={{ opacity: 1, x: 0 }}
-          className="lg:w-1/2 flex flex-col gap-8"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="w-full max-w-4xl flex flex-col gap-8 text-center items-center"
         >
           <div className="flex items-center gap-3">
             <span className="bg-accent/10 border border-accent/20 text-accent px-6 py-2 rounded-[20px] text-[10px] font-black tracking-[0.3em] uppercase italic transition-all hover:bg-accent/20">
@@ -34,17 +34,17 @@ const About = () => {
             <p className="text-lg text-slate-500 max-w-lg leading-relaxed font-bold uppercase tracking-tighter decoration-accent/10 underline decoration-2 underline-offset-4 decoration-2 italic italic-spacing selection:bg-accent/20">
               Founded in 1995 with a vision to provide specialized dental care, KSV Dental Clinic has become a benchmark for medical excellence. Under the leadership of Dr. L. Suresh, BDS (Dental Surgeon), we integrate 3 decades of expertise with modern digital precision.
             </p>
-            <div className="space-y-4">
-               <p className="text-[10px] text-slate-400 font-black uppercase tracking-[0.3em] italic leading-relaxed">
+            <div className="space-y-4 text-slate-400 font-black uppercase tracking-[0.3em] italic leading-relaxed text-center max-w-2xl mx-auto">
+               <p>
                  Dr. Suresh, BDS's journey began with a commitment to pain-free dentistry. Over 30 years, he has successfully treated thousands of complex endodontic and surgical extraction cases, carving a niche in high-grade restorative treatments in the region.
                </p>
-               <p className="text-[10px] text-slate-400 font-black uppercase tracking-[0.3em] italic leading-relaxed border-l-2 border-accent pl-4">
+               <p className="border-t border-accent/20 pt-4">
                  Our mission is simple: to provide international-standard dental care with a gentle touch. We believe that every patient deserves a safe, sterile, and anxiety-free clinical environment.
                </p>
             </div>
           </div>
           
-          <div className="grid grid-cols-2 gap-8">
+          <div className="grid grid-cols-2 gap-8 w-full max-w-2xl">
               <div className="bg-slate-50 p-8 rounded-[40px] border border-slate-100/50 shadow-2xl transition-all hover:scale-105 group hover:border-accent">
                 <div className="text-3xl font-black text-primary mb-1 tracking-tighter italic group-hover:text-accent font-outfit">30+</div>
                 <div className="text-[8px] font-black text-slate-400 uppercase tracking-[0.4em] font-outfit">Clinical Years</div>
@@ -56,31 +56,6 @@ const About = () => {
           </div>
         </motion.div>
         
-        <motion.div 
-          initial={{ opacity: 0, scale: 0.9, y: 30 }}
-          animate={{ opacity: 1, scale: 1, y: 0 }}
-          transition={{ delay: 0.4, duration: 1 }}
-          className="lg:w-1/2 relative hidden lg:block"
-        >
-          <div className="absolute inset-0 bg-indigo-100/30 blur-[150px] rounded-full animate-pulse z-0"></div>
-          <div className="relative z-10 p-4 bg-white/40 backdrop-blur-3xl rounded-[64px] border border-white shadow-2xl ring-1 ring-slate-900/5 transition-transform hover:scale-[1.01] duration-1000">
-             <Image 
-                src="/doctor_portrait_1772036839350.png" 
-                width={600}
-                height={600}
-                className="w-full rounded-[48px] shadow-2xl transition-transform duration-700" 
-                alt="Medical Excellence" 
-                priority
-             />
-          </div>
-          <div className="absolute -bottom-8 -left-8 bg-white p-10 rounded-[48px] shadow-2xl border border-slate-50 z-20 transition-transform hover:scale-110 duration-500 shadow-primary/10">
-             <ShieldCheck size={40} className="text-primary group-hover:text-accent transition-colors" />
-             <div className="mt-4">
-               <span className="text-2xl font-black text-primary tracking-tighter truncate italic block">Dr. L. Suresh, BDS (Dental Surgeon)</span>
-               <span className="text-[8px] font-black text-slate-400 uppercase tracking-[0.4em] block mt-1">Lead Dental Surgeon</span>
-             </div>
-          </div>
-        </motion.div>
       </div>
     </section>
   );
