@@ -78,7 +78,7 @@ const Hero = () => {
 
 const Metrics = () => {
   const data = [
-    { title: "Specialties", value: "12+", icon: Stethoscope },
+    { title: "Specialties", value: "6+", icon: Stethoscope },
     { title: "Surgical Success", value: "1,000+", icon: ShieldCheck },
     { title: "Consulting Hours", value: "Check Branches", icon: Clock },
     { title: "Clinical Standards", value: "9+ STARS", icon: Star },
